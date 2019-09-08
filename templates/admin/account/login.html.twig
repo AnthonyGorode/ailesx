@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{asset('img/cadenas.jpg')}}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connection Administration</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card{
+            margin-top: 30%;
+        }
+        .image_fond_admin_login{position: fixed; right: 0; bottom: 0;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: -100;background: url(https://cdn.surfair.com/app/uploads/2016/04/skyBG_afternoon1.jpg) no-repeat;background-size: cover;background-position: top;}
+    </style>
+</head>
+<body>
+    <div class="image_fond_admin_login"></div>
+    <div class="col-md-4">
+        <div class="card bg-light">
+            <div class="card-header">
+                <h4 class="card-title">
+                    <i class="fas fa-lock"></i>
+                    Connexion à l'administration
+                </h4>
+            </div>
+            <div class="card-body">
+                {% if hasError %}
+                    <div class="alert alert-warning">
+                        <p>L'adresse mail ou le mot de passe est incorrect</p>
+                    </div>
+                {% endif %}
+                <form method="post">
+                    <div class="form-group"><label for="_username">Adresse mail</label><input type="text" class="form-control" placeholder="Adresse Mail ..." name="_username"></div>
+                    <div class="form-group"><label for="_password">Mot de passe</label><input type="password" class="form-control" placeholder="Mot de passe ..." name="_password"></div>
+                    <div class="form-group">
+                        <input type="hidden" name="_target_path" value="{{ path('admin_dashboard_index') }}"/>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-lock-open"></i>
+                            LOGIN
+                        </button>
+                        <a href="{{ path('home') }}" class="btn btn-link">
+                            <i class="fas fa-arrow-circle-left"></i>
+                            Retour au site
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

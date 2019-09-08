@@ -1,0 +1,111 @@
+a button .btn-options{cursor: pointer;}
+footer{text-align: center;color: #fff;font-size: 15px;background: rgba(44, 62, 80,0.5);margin-bottom: -15px;}
+footer a{text-transform: uppercase;color: #fff;text-decoration: none;padding: 2px 0;}  
+footer nav{margin: 0 auto;}         
+footer .footer-links{margin-bottom: 25px;}
+footer .footer-links li{display: inline-block;margin: 0 7px;}
+footer .appstore-desktop{display: block;width: 125px;margin: 0 auto 15px;}
+footer .social-links{text-align: center;margin-bottom: 20px;font-size: 24px;padding-left: 0px;}
+footer .social-links li{display: inline-block;margin: 0 7px;}
+footer .disclaimer{font-family: FFKievitWebPro, Helvetica, Verdana, sans-serif;font-size: 12px;letter-spacing: normal;max-width: 500px;margin: 0 auto 20px;}
+footer .copyright{font-family: FFKievitWebPro, Helvetica, Verdana, sans-serif;font-size: 12px;letter-spacing: normal;}
+img { width: 100%; height: 100%; }
+
+ /* .image_fond{
+    background-image: url(https://thumbs.gfycat.com/EarlyGrizzledAzurewingedmagpie-max-1mb.gif);
+    background-size: cover;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}  */
+.row{margin-left: 0px;margin-right: 0px;}
+.marg{margin-right: 0px;}
+.bloc_info{display: none;}
+.bloc_nav nav{font-family: FFKievitWebProBold;font-size: 12px;height: 60px;background:#001944!important;}
+ #navbarColor01 ul{font-weight:bold;}
+ .invite{display: none;}
+
+.navbar-toggler{margin-top:-12px;}
+.bloc_nav{position: relative;}
+.content_info{position: absolute;left: 80%; top: 20%;}
+.icon_tab_phone{display:none;margin-top:-12px;}
+.num_phone{display: initial;}
+.icon_ailesx{width: 156px;height: 40px;margin-top:0px;}
+.button{border-radius: 2px;background-color: #fff;font-weight: bold;font-family: FFKievitWebProBold, Helvetica, Verdana, sans-serif;letter-spacing: 0.1em;color: #001944!important;text-transform: uppercase;padding: 9px 20px 8px;text-decoration: none;display: inline-block;line-height: normal;cursor: pointer;-webkit-appearance: none;-moz-appearance: none;appearance: none;font-size:11px;}
+.button:hover{background-color: #001944;color:white!important;text-decoration: none;}
+
+.img_accroch_phone{display: none;}
+
+nav .footer-links{margin-bottom: 0px;margin-top: 10px;}
+.navbar-dark a.nav-link{text-decoration:none;text-align: center;color: #efef!important;text-transform: uppercase;}
+.navbar-dark a.nav-link:after{content: '';display: block;margin: auto;height: 1px;width: 0;background: transparent;transition: width .5s ease, background-color .5s ease;}
+.navbar-dark a.nav-link:hover:after{width: 90%;background: #efef;}
+
+
+/* li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+} */
+
+/* media queries*/
+@media screen and (max-width:2000px){
+    #navbarColor01 ul li{padding-right: 15px;}
+}
+@media screen and (max-width:1800px){
+    .content_info{left: 78%; top: 20%;}
+}
+@media screen and (max-width:1600px){
+    .content_info{left: 75%; top: 20%;}
+}
+ @media screen and (max-width:1445px){
+    .content_info{left: 71%; top: 20%;}
+    #navbarColor01 ul{margin-left: 0%!important;}
+    #navbarColor01 ul li{padding-right: 0px;}
+}
+@media screen and (max-width:1355px){
+    .content_info{left: 71%; top: 20%;}
+}
+ @media screen and (max-width:1320px){}
+ @media screen and (max-width:1250px){
+    .num_phone{display: none;}
+    .content_info{left: 76%;}
+}
+@media screen and (max-width:1220px){
+    #navbarColor01 ul{font-size: 11px;}
+    .content_info{left: 71%;}
+    .num_phone{display: none;}
+}
+@media screen and (max-width:1060px){
+    #navbarColor01 ul{margin-left: 0.333%!important;}
+}
+
+ /* media queries pour tablettes */
+ @media screen and (max-width:992px){
+     .experience{display: none;}
+    .bloc_info{display: block;text-align: center;}
+    .icon_tab_phone{display:initial;}
+    .content_info{display: none;}
+    .bloc-options{padding-left: 0px;}
+}
+
+@media screen and (max-width:990px){
+    #navbarColor01{background:#001944;margin-left: -16px;margin-right: -16px;}
+    .bloc_info{margin-bottom:20px;}
+    .icon_ailesx{margin-top:-12px;}
+    #navbarColor01 ul{font-size:13px;}
+}
+/* media queries pour smartphones */
+
+@media screen and (max-width:450px){
+    .title-option{font-size: 31px;}
+    .copy-option{font-size: 15px;}
+    .contact-options{font-size: 15px;}
+    nav .footer-links{font-size: 12px;}
+}

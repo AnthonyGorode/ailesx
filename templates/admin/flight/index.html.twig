@@ -1,0 +1,76 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des vols{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <h1 class="my-5">Gestion des vols</h1>
+    <form action="{{ path('admin_flights_index',{'concat' : 'concact'}) }}" method="GET" class="form-inline my-2 float-right">
+        <input class="form-control mr-sm-2" type="search" name="concact" placeholder="Search">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <div class="form-group">
+        <a href="{{ path('admin_flights_new') }}" class="btn btn-primary">
+            <i class="fas fa-plus-circle"></i>
+            Ajouter un vol
+        </a>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>
+                    <a href="{{ path('admin_flights_index',{'column' : 'f.numFlight' ,'order' : 'ASC','concat': concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numéro vol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_flights_index',{'column' : 'f.numFlight' ,'order' : 'DESC','concat': concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_flights_index',{'column' : 'f.hourDeparture' ,'order' : 'ASC','concat': concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aéroport de départ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_flights_index',{'column' : 'f.hourDeparture' ,'order' : 'DESC','concat': concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_flights_index',{'column' : 'f.hourArrival' ,'order' : 'ASC','concat': concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aéroport d'arrivée&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_flights_index',{'column' : 'f.hourArrival' ,'order' : 'DESC','concat': concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_flights_index',{'column' : 'countBooker' ,'order' : 'ASC','concat': concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre de sièges réservés&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_flights_index',{'column' : 'countBooker' ,'order' : 'DESC','concat': concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for flight in pagination.data  %}
+            <tr>
+                    {% dump(flight) %}
+                <td>{{ flight.id }}</td>
+                <td>{{ flight.numFlight }}</td>
+                <td>
+                    <m class="departure">{{ flight.airportDeparture }}</m>
+                    <br>
+                    <m class="arrival">{{ flight.hourDeparture | date('d/m/Y H:i') }}</p>
+                </td>
+                <td>
+                    <m class="departure">{{ flight.airportArrival }}</m>
+                    <br> 
+                    <m class="arrival">{{ flight.hourArrival | date('d/m/Y H:i') }}</m>
+                </td>
+                <td>
+                    {{ flight.countBooker }} / {{ flight.countSeat }} sièges
+                </td>
+                <td>
+                    <a href="{{ path('admin_flights_edit', {'id' : flight.id}) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {{ pagination.display() }}
+</div>
+{% endblock %} 

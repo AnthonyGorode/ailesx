@@ -1,0 +1,75 @@
+.container-fluid{
+    padding-left:0px;
+    padding-right:0px;
+}
+.image_fond_destination {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+section{
+    background: #fff;
+    padding-top: 60px;
+}
+h1{
+    padding-top: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+.bloc_destination{
+    padding: 30px;
+    height: 680px;
+}
+.montpellier{
+    margin: 30px;
+    float: right;
+}
+.img_montpellier{
+    position: relative;
+    background: url(https://www.tourisme.fr/images/otf_offices/1874/place-de-la-comedie-montpellier.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+    .btn_mont{
+        position: absolute;  
+        top: 80%;
+        color: #fff; 
+        background-color: rgba(44, 62, 80,0.5);
+        width: 100%;
+        height: 20%; 
+    }
+        .btn_mont a{
+                margin-top: 30px;
+                margin-left: 30px;
+        }
+        .btn_mont p{
+            margin-left: 30px;
+        }
+.img_toulouse{
+    position: relative;
+    background: url(https://vl-media.fr/wp-content/uploads/2017/11/toulouse-traveller_2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+    .btn_toul{
+        position: absolute;  
+        top: 80%; 
+        color: #fff;
+        background-color: rgba(44, 62, 80,0.5);  
+        width: 100%;
+        height: 20%;             
+    }
+        .btn_toul a{
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .btn_toul p{
+            margin-left: 30px;
+        }

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/loginMin.css') }}">
+{% endblock %}
+
+{% block body %}
+<video id="video" autoplay="" loop="" muted="">
+        <source src="https://cdn.surfair.com/wp-content/uploads/2018/04/04184631/Homepage-Video-Cuts_v4_Compressed.webmhd.webm" type="video/webm">
+        <source src="https://cdn.surfair.com/wp-content/uploads/2018/04/04184643/Homepage-Video-Cuts_v4_1.mp4" type="video/mp4">
+</video>
+
+    {% if hasError %}
+    <div class="row">
+        <div class="col-4 alert alert-danger">Une erreur est survenue, le nom d'utilisateur ou le mot de passe est invalide</div>
+    </div>
+    {% endif %}
+<div class="page_login" style="position:relative;">
+    <div class="bloc_login">
+        <form class="bloc_form" id="connect" action="{{ path('account_login') }}" method="post" style="display: block;">
+            <h3 style="margin-bottom:20px;">MEMBER LOGIN</h3>
+            <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="text" name="_username" id="email" class="form-control" placeholder="Adresse email..." required value="{{ username }}"> 
+            </div>
+            <div class="form-group">
+                <label for="email">MOT DE PASSE</label>
+                <input type="password" name="_password" id="password" class="form-control" placeholder="Mot de passe ..." required> 
+            </div>	
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-lg" value="LOGIN" style="width:240px;">
+            </div>			
+            <div style="font-size:20px;margin:20px; text-align: center;">
+                <div style="margin-bottom:20px;"><a href="" style="color:aliceblue;">Forgot Password</a></div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- <div class="height_screen fixed-bottom" style="font-size:50px; color:blue;bottom:76px;"></div> -->
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/loginMin.js') }}" crossorigin="anonymous"></script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link href="{{asset('build/css/oneArticle.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+<div class="image_fond_oneArticle"></div>
+    <div class="container_article">
+        <article class="container bloc_article">
+            <div class="info_oneArticle">
+                <div style="float:right;">21 mars 2019</div>
+                <div>AilesX</div>
+            </div>
+            <div class="row bloc1">
+                <div class="col-12">
+                <hr>
+                    <h1 class="title_oneArticle">THE BEGINNING OF COMMERCIAL AVIATION</h1>
+                <hr>
+
+                <h2 class="child_title">A transport evolution</h2>
+                    <p class="content_oneArticle">On January 1914, ten years after the Wrigth brothers' flight (December 17, 1903), a passenger paid for the first time a plane ticket on the first airline in the history.</p>
+                    <p class="content_oneArticle">St.Petersburg - Tampa Airboat Line inaugurated a scheduled flight service from Tampa Bay to St. Petersburg (Florida) in 23 minutes. To connect these two cities distant of about 30 kilometers. Before, it took two and half hoursby boat,six hours by train and even a day by car : a transport revolution was born !</p>
+                </div>
+            </div>
+            <div class="row bloc2">
+                <div class="col-12 col-sm-6">
+                    <h2 class="child_title">Tickets sold for 400$</h2>
+                    <p class="content_oneArticle">The hero of the day was Abram C.Pheil, 47, the former mayor of Tampa. He had the chance to be the first airline passenger for 400$. That's 9.200$ today ! </p>
+                    <hr>
+                    <p class="content_oneArticle">" Impressive benefits" says Tony Tyler, CEO of IATA, (International Air Transport Association). Even adjusting for inflation, this price is twice higher as the average of the flights issued today. " </p>
+                    <hr>
+                    <p class="content_oneArticle">The company stopped flying 5 months after, making 172 flights equivalent to 7,000 miles, and carrying 1,205 passengers</p>
+                    <hr>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <img class="img_oneArticle" src="http://zenithcity.com/wp-content/uploads/2017/04/Lark_1stFlight_tampa.jpg">
+                    <p class="content_img">the "Benoist Type XIV" piloted by Tonny Jannus. The aircraft reached a speed of 121 km/h and didn’t exceed 15 meters altitude.</p>
+                    <div class="last_content">
+                        <p>A century later, airlines carry more than 3 billion passengers a year. Every minute, 52 flights take off from an airport all over the world !</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

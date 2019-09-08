@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="{{asset('img/AilesX_favicon.png')}}" type="image/x-icon">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <!-- <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="{{ asset('css/bootswatch.min.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('build/css/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        {% block stylesheets %}{% endblock %}
+        <style type="text/css">
+            .container-fluid{
+                padding-right:0;
+                padding-left:0;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="image_fond">
+            {% include 'partials/header.html.twig' %}  
+            {% if controller_page is not defined %}
+            <div style="height:70px;"></div>
+            {% else %}
+            {% endif %}
+            {% for label,messages in app.flashes %}
+                <div class="container" style="margin-top:4rem;">
+                    <div class="alert alert-{{ label }}">
+                        {% for message in messages %}
+                        <p>{{ message | raw }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+            {% block body %}{% endblock %}
+    
+            {% if page_controller is not defined %}
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <nav>
+                            <ul class="nav footer-links">         
+                                <li id="menu-item-1889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1889"><a href="">About</a></li>
+                                <li id="menu-item-2188" class="menu-item menu-item-type-post_type_archive menu-item-object-faqs menu-item-2188"><a href="">FAQ</a></li>
+                                <li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="">Newsroom</a></li>
+                                <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="">Press</a></li>
+                                <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="">Careers</a></li>
+                                <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="">Legal</a></li>      
+                            </ul>
+                        </nav>
+                    </div>
+                    <hr>
+                    <h5 style="text-align:center;">BIENTÔT DISPONIBLE</h5>
+                    <a href=""><img class="btn-appstore appstore-desktop" src="https://www.surfair.com/app/themes/surfair/assets/images/appstore.png" alt=""></a>
+                    <hr>
+                    <ul class="social-links">
+                        <li>
+                            <a href="" target="_blank" class="icons"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank" class="icons"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank" class="icons"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank" class="icons"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                    <p class="disclaimer">AilesX does not own or operate any aircraft. AilesX arranges travel and other services solely as a manager of the AilesX membership program and as an agent of its membership. All flights arranged by AilesX for its members are performed by independent, third party FAA-licensed and DOT-registered air carriers.</p>
+                    <p class="copyright">© 2019 AilesX</p>
+                </div>
+            </footer>
+            {% endif %}
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ asset('js/baseMin.js') }}" crossorigin="anonymous"></script>
+    {% block javascripts %}{% endblock %}  
+
+    </body>
+</html>

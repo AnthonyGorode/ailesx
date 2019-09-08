@@ -1,0 +1,166 @@
+.container-fluid{
+    padding-left:0px;
+    padding-right:0px;
+}
+video#video {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+    background-size: cover;
+}
+#mc_embed_signup{padding: 50px 20px 0;}
+::-webkit-input-placeholder { text-align:center; }
+#mc-embedded-subscribe{margin: 1em 3em 14%;}   
+::-moz-placeholder { text-align:center; } /* firefox 19+ */
+:-ms-input-placeholder { text-align:center; } /* ie */
+input:-moz-placeholder { text-align:center; }
+.marg{margin-top:15%;}
+.titre_block{
+    margin-top:20px;
+}
+.title-option{
+    text-align:center;
+    margin: 15px;
+}
+.copy-option{
+    text-align:center;
+    margin: 30px;
+}
+.bloc-options{
+    padding-left: 14px;
+}
+.bloc-options-child{
+    border-radius:20px;
+}
+.plan-check-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.plan-check-list li {
+    margin-bottom: 3px;
+}
+.copy-option{
+    font-size: 20px;
+}
+.plan-big-title{
+    font-size:30px;margin-bottom:10px;
+}
+.plan-title{
+    font-size:22px;margin-bottom:10px;margin-top: 15px;
+}
+.plan-subtitle{
+    font-size:22px;margin-bottom:10px;
+}
+.btn-options {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.plan-price{
+    font-size:20px;margin:10px;
+}
+.plan-conditions{
+    font-size:16px;margin-bottom:30px;
+}
+.plan-tax-disclaimer{
+    float: right;
+}
+.contact-options{
+    color:#efefef;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.img_form{
+    position: absolute;
+    top: 0;
+    right: -260px;
+    height:initial;
+    width: 1252px;
+    z-index: 1;
+}
+.form_coord{
+    z-index: 2;
+    background: #efefef;
+    height: 665px;
+}
+.img_simple{
+    height: 300px;
+}
+
+/* Media queries */
+@media screen and (max-width:1630px){
+    .img_simple{
+        height: 330px;
+    }
+}
+@media screen and (max-width:1270px){
+    .img_form{
+        left: -200px;
+    }
+}
+@media screen and (max-width:1100px){
+    .img_simple{
+        height: 354px;
+    }
+    .img_form{
+        left: -300px;
+    }
+}
+@media screen and (max-width:990px){
+    #navbarColor01 {
+    background: #001944;
+    margin-left: -16px;
+    margin-right: -16px;
+    }
+    .marg{margin-top:0;}
+    .img_form{
+        display: none;
+    }
+}
+@media screen and (max-width:880px){
+    .img_simple{
+        height: 440px;
+    }
+}
+@media screen and (max-width:765px){
+    .img_accroch_phone{
+        display: initial;
+        height: 300px;
+    }
+    .img_accroch_defaut{
+        display: none;
+    }
+    .img_simple{
+        height: 300px;
+    }
+    .img_efficace{
+        height: 300px;
+        left: -8%;
+    }
+                
+}
+@media screen and (max-width:565px){
+    .img_simple{
+        height: 300px;
+    }
+    .img_efficace{
+        left: -30%;
+    }
+                
+}
+@media screen and (max-width:430px){
+    .img_simple{
+        height: 300px;
+    }
+    .img_efficace{
+        left: -65%;
+    }
+                
+}
+@media screen and (max-width:980px){#mc-embedded-subscribe{margin: 1em 0 1em 31%;}}
+@media screen and (max-width:766px){#mc-embedded-subscribe{margin: 1em 0 1em 38%;}}
+@media screen and (max-width:540px){#mc-embedded-subscribe{margin: 1em 0 1em 28%;}}

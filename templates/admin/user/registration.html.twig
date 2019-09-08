@@ -1,0 +1,97 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Création d'un compte {% endblock %}
+
+{% block stylesheets %}
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}" />
+    <style>
+        .image_fond_add {
+            position: fixed; right: 0; bottom: 0;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto; z-index: -100;
+            background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+            background-size: cover;
+            background-position: top;
+        }
+        
+        input{height: 30px!important;}
+        form-role{display:none;}
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="image_fond_add"></div>
+<div class="container">
+    <div class="col-sm-6 form-user" style="margin-right:60%;">
+            {{ form_start(form) }}
+            
+            <div class="well">
+                <i class="fas fa-user" style="float:left;"></i>
+                <h2 style="text-align:center;">Création d'un compte</h2>
+                <div class="form-group">
+                    {{ form_label(form.lastName) }}
+                    {{ form_errors(form.lastName) }}
+                    {{ form_widget(form.lastName) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.firstName) }}
+                    {{ form_errors(form.firstName) }}
+                    {{ form_widget(form.firstName) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.email) }}
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.picture) }}
+                    {{ form_errors(form.picture) }}
+                    {{ form_widget(form.picture) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.hash) }}
+                    {{ form_widget(form.hash) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.passwordConfirm) }}
+                    {{ form_errors(form.passwordConfirm) }}
+                    {{ form_widget(form.passwordConfirm) }}
+                </div>
+                <div class="form-group">
+                    <label for="airportDeparture">Définir le Role</label>
+                    <select class="select" id="Arrival" name="_role">
+                        <option class="placeholder">ROLE_USER</option>
+                        {% for role in roles %}
+                            <option class="placeholder">{{ role.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-check"></i>
+                    Enregistrer le compte
+                </button>
+                <a href="{{ path('admin_flights_index') }}" class="btn btn-link" style="float:right;">
+                    <i class="fas fa-arrow-circle-left"></i>
+                    Retour aux utilisateurs
+                </a>
+            </div>
+        </div>
+    {{ form_end(form) }}
+    </div>
+
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/fr.js') }}"></script>
+
+<script>
+$(document).ready(function(){
+
+});
+</script>
+
+{% endblock %}

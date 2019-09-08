@@ -1,0 +1,22 @@
+.container-fluid{padding-left: 0px;padding-right: 0px;}
+.image_fond_report{position: fixed; right: 0; bottom: 0;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: -100;background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;background-size: cover;background-position: top;}
+section{margin-top: 60px;background: #f7f7f7f7;height: 100%;position: relative;}
+.img_women{position: relative;background: url(http://fly.historicwings.com/wp-content/uploads/2013/01/HighFlight-SPTAirboatLine6.jpg) no-repeat;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 500px;padding: 15px;}
+.content_women{margin-bottom:6%;}
+.img_sushi{position: relative;background: url(https://cdn.surfair.com/wp-content/uploads/2018/12/17215955/Sushi-pic-.jpg) no-repeat;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 500px;padding: 15px;}
+.content_women{margin-bottom:6%;}
+.content_women a{color: black;}
+.img_winter{position: relative;background: url(https://cdn.surfair.com/wp-content/uploads/2019/03/08211431/IMG_7286.jpg) no-repeat;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 500px;padding: 15px;}
+.content_women{padding: 20px;margin-bottom:6%;}
+.img_hotel{position: relative;background: url(https://cdn.surfair.com/wp-content/uploads/2018/06/22175308/unnamed.jpg) no-repeat;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 500px;padding: 15px;}
+.content_women{margin-bottom:6%;}
+.img_man{position: relative;background: url(https://cdn.surfair.com/wp-content/uploads/2018/07/24165029/IMG_1440-copy.jpg) no-repeat;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 500px;padding: 15px;}
+.content_women{margin-bottom:6%;}
+.follow{color:#fff;background: #001944;height: 150px;width: 40%;text-align: center;font-size: 15px;padding-top: 4%;margin-left: 60%;margin-bottom: 30px;}
+.follow h3{font-size: 15px;}
+.social-links_report{display: flex;list-style-type: none;margin-left:16%;}
+.social-links_report li{margin: 15px;text-decoration: none;}
+.social-links_report a{color: #fff;}
+@media screen and (max-width:1367px){
+    .social-links_report{margin-left: 1px;}
+}

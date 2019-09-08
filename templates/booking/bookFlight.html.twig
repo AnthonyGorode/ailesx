@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}liste des vols{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row text-center">
+        {% if issetBooking == 0 %}
+            {% for userBooking in userBookings %}
+                <div class="col-sm-6 mb-5 text-center">
+                    <span>De :</span>
+                    <h3>{{ userBooking.flight.airportDeparture.nameAirport }}</h3>
+                    <p>{{ userBooking.flight.airportDeparture.city.nameCity }}</p>
+                    <div>Depart : {{ userBooking.flight.hourDeparture | date('d/m/y') }} à {{ userBooking.flight.hourDeparture | date('H:i') }}</div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <span>à :</span>
+                    <h3>{{ userBooking.flight.airportArrival.nameAirport }}</h3>
+                    <p>{{ userBooking.flight.airportArrival.city.nameCity }}</p>
+                    <div>Arrivée : {{ userBooking.flight.hourArrival | date('d/m/y') }} à {{ userBooking.flight.hourArrival | date('H:i') }}</div>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <h3>Votre siège</h3>
+                    <hr>
+                    <div>{{ userBooking.seat.numSeat }}</div>
+                    <hr>
+                </div>
+            {% endfor %}
+        {% else %}
+        <div class="container">
+            <div class="alert alert-dismissible alert-secondary col-12">
+                Vous n'avez pas réservé de vols pour le moment, consultez la liste des vols.
+              </div>
+              <a href="{{ path('flight_index') }}" class="btn btn-primary col-2">VOLS</a>
+        </div>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

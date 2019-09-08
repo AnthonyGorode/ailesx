@@ -1,0 +1,107 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des utilisateurs{% endblock %}
+
+{% block stylesheets %}
+ <style>
+     .icon_statut{
+         width: 30px!important;
+         height: 30px!important;
+     }
+ </style>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <h1 class="my-5">Gestion des utilisateurs</h1>
+    <form action="{{ path('admin_users_index',{'concat' : 'concact'}) }}" method="get" class="form-inline my-2 float-right">
+        <input class="form-control mr-sm-2" type="search" name="concact" placeholder="Search">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <div class="form-group">
+        <a href="{{ path('admin_account_register') }}" class="btn btn-primary">
+            <i class="fas fa-plus-circle"></i>
+            Ajouter un utilisateur
+        </a>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>
+                    <a href="{{ path('admin_users_index',{'column' : 'b.lastName' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_users_index',{'column' : 'b.lastName' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_users_index',{'column' : 'b.firstName' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prénom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_users_index',{'column' : 'b.firstName' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    Avatar
+                </th>
+                <th>
+                    <a href="{{ path('admin_users_index',{'column' : 'u.email' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_users_index',{'column' : 'u.email' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_users_index',{'column' : 'ur.title' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rôle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_users_index',{'column' : 'ur.title' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_users_index',{'column' : 'u.lastActivity' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dernière connexion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_users_index',{'column' : 'u.lastActivity' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_users_index',{'column' : 'u.connected' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En ligne&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_users_index',{'column' : 'u.connected' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for user in pagination.data  %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.lastName | upper}}</td>
+                <td>{{ user.firstName }}</td>
+                <td><img src="{{ user.picture }}" alt="avatar de {{ user.fullName }}" class="avatar avatar-medium"/></td>
+                <td>{{ user.email }}</td>
+                {% if user.userRoles is empty %}
+                    <td>ROLE_USER</td>
+                {% else %}
+                    <td>{{user.userRoles.toArray.0.title}}</td>
+                {% endif %}
+                <td>
+                    {% if user.lastActivity is empty %}
+                        NULL
+                    {% else %}
+                        {{ user.lastActivity | date('d/m/Y') }} à {{ user.lastActivity | date('H:i') }}
+                    {% endif %}
+                </td>
+                <td>
+                {% if user.connected != 1 %}
+                    <img src="{{ asset('img/statut_user/hors_ligne.png') }}" class="icon_statut" alt="statut de l'utilsateur hors ligne">
+                {% else %}
+                    <img src="{{ asset('img/statut_user/en_ligne.png') }}" class="icon_statut" alt="statut de l'utilsateur en ligne">
+                {% endif %}
+                </td>
+                <td>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                    <a href="{{ path('admin_user_delete',{'id' : user.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {{ pagination.display() }}
+</div>
+{% endblock %} 

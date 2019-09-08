@@ -1,0 +1,160 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block stylesheets %}
+   <style>
+       .alert-custom-success{
+           background-color: #90bf49;
+       }
+       .alert-custom-danger{
+           background-color: #dc3545;
+       }
+   </style> 
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card bg-primary text-white mb-3 text-center rounded">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <i class="fas fa-users fa-3x"></i>
+                        </div>
+                        <div class="col">
+                            <h4 class="card-title">{{ stats.users }}<br> utilisateurs</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-info text-white mb-3 text-center rounded">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <i class="fas fa-plane-departure fa-3x"></i>
+                        </div>
+                        <div class="col">
+                            <h4 class="card-title">{{ stats.flights }}<br> vols</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-warning text-white mb-3 text-center rounded">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <i class="fas fa-folder fa-3x"></i>
+                        </div>
+                        <div class="col">
+                            <h4 class="card-title">{{ stats.bookings }}<br> réservations</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-success text-white mb-3 text-center rounded">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4">
+                                <i class="fas fa-map-marker-alt fa-3x"></i>
+                        </div>
+                        <div class="col">
+                            <h4 class="card-title">{{ stats.airports }}<br> destinations</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="alert alert-primary rounded m-3">
+                <h2 class="alert-heading my-3"><i class="fas fa-arrow-down"></i> Les vols d'aujourd'hui</h2>
+                <table class="table table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Vol</th>
+                            <th>Départ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for flight in flights %}
+                        <tr>
+                            <td>{{ flight.id }}</td>
+                            <td>
+                                <strong>De</strong>
+                                <p>{{ flight.cityDeparture }}</p>
+                                <strong>À :</strong>
+                                <p>{{ flight.cityArrival }}</p>
+                            </td>
+                            <td>{{ flight.hourDeparture | date('H:i') }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="alert alert-secondary rounded m-3 text-center">
+                
+                <h2 class="alert-heading my-3">Utilisateurs connectés</h2>
+                <h4 style="font-size:50px;">{{ online }}</h4>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="alert alert-custom-success rounded m-3">
+                <h2 class="alert-heading my-3"><i class="fas fa-arrow-up"></i> Les destinations populaires</h2>
+                <table class="table table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ville</th>
+                            <th>Réservations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for city in bestDestinations %}
+                        <tr>
+                            <td>{{ city.idflight }}</td>
+                            <td>{{ city.nameCity }}</td>
+                            <td>{{ city.totalBooker }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="alert alert-custom-danger rounded m-3">
+                <h2 class="alert-heading my-3"><i class="fas fa-arrow-down"></i> Les pires destinations</h2>
+                <table class="table table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ville</th>
+                            <th>Réservations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for city in worstDestinations %}
+                        <tr>
+                            <td>{{ city.idflight }}</td>
+                            <td>{{ city.nameCity }}</td>
+                            <td>{{ city.totalBooker }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

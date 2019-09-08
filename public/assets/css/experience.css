@@ -1,0 +1,245 @@
+/* css experience.html */
+.container-fluid{
+    padding: 0px;
+}
+.image_fond_experience{
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+section{
+    margin-top: 60px;
+}
+.carousel{
+    margin-bottom: -6px;
+    position: relative;
+}
+.title_carousel{
+    position: absolute;
+    top: 0%;
+    color: #fff;
+    z-index: 3;
+    left: 40%;
+}
+.video_1{
+    position: relative;
+}
+video{
+    z-index: 1000;
+}
+.slide-content hr{
+    border: 1px solid #fff;
+}
+.slide-content{
+    color: #fff;
+    position: absolute;
+    z-index: 2000;
+    top: 14%;
+    left: 14%;
+    padding-left: 3%;
+    padding-right: 60%;
+    text-align: center;
+}
+
+.slide-stat ul{
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    list-style: none;
+}
+.slide-stat li{
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+.slide-stat a{
+    color: #fff;
+    text-decoration: none!important;
+}
+.slide-stat a:hover{
+    text-decoration: underline!important;
+}
+.slide-title{
+    font-size: 34px;
+    font-family: "FFKievitWebProLight",Helvetica,Verdana,sans-serif;
+}
+.slide-body{
+    font-size: 24px;
+    font-family: "FFKievitWebPro";
+}
+.stat-number{
+    font-size: 80px;
+}
+.stat-caption{
+   font-size:  24px;
+   font-family: "FFKievitWebProLight",Helvetica,Verdana,sans-serif;
+}
+.bloc-slide-content{
+    color: #fff;
+    position: absolute;
+    z-index: 2000;
+    top: 14%;
+    left: 14%;
+    text-align: center;
+    background:#001944;
+    display:none;
+}
+
+/* @media queries */
+@media screen and (max-width:1450px){
+    .slide-content{
+        left: 6%;
+    }
+    .slide-title{
+    font-size: 34px;
+    }
+    .slide-body{
+        font-size: 20px;
+    }
+    .stat-number{
+        font-size: 40px;
+    }
+    .stat-caption{
+    font-size:  20px;
+    }
+}
+@media screen and (max-width:1250px){
+    
+    .slide-title{
+    font-size: 34px;
+    }
+    .slide-body{
+        font-size: 17px;
+    }
+    .stat-number{
+        font-size: 40px;
+    }
+    .stat-caption{
+    font-size:  17px;
+    }
+}
+@media screen and (max-width:1000px){
+    
+    .slide-title{
+    font-size: 29px;
+    }
+    .slide-body{
+        font-size: 17px;
+    }
+    .stat-number{
+        font-size: 40px;
+    }
+    .stat-caption{
+    font-size:  17px;
+    }
+    .bloc-slide-content{
+        display:block;
+    }
+    .slide-content{
+        display:none;
+    }
+
+    .carousel-inner{
+        height: 790px;
+    }
+    .bloc-slide-content{
+        height: 365px;
+        top: 97%;
+        left: 0%;
+    }
+    .carousel-indicators{
+        bottom:280px;
+    }
+    .carousel-control-prev{
+       bottom: 440px; 
+    }
+    .carousel-control-next{
+       bottom: 440px; 
+    }
+}
+
+@media screen and (max-width:960px){
+    .carousel-indicators{
+        bottom:320px;
+    }
+    .carousel-control-prev{
+       bottom: 440px; 
+    }
+    .carousel-control-next{
+       bottom: 440px; 
+    }
+}
+
+@media screen and (max-width:840px){
+    .title_carousel{
+        left: 28%;
+    }
+    .carousel-indicators{
+        bottom:300px;
+    }
+    .carousel-control-prev{
+       bottom: 320px; 
+    }
+    .carousel-control-next{
+       bottom: 320px; 
+    }
+    .carousel-inner{
+        height: 680px;
+    }
+}
+
+@media screen and (max-width:680px){
+    .carousel-indicators{
+        bottom:360px;
+    }
+
+}
+
+@media screen and (max-width:580px){
+    .carousel-indicators{
+        bottom:350px;
+    }
+    .carousel-control-prev{
+       bottom: 360px; 
+    }
+    .carousel-control-next{
+       bottom: 360px; 
+    }
+    .carousel-inner{
+        height: 620px;
+    }
+    .title_carousel{
+        left: 16%;
+    }
+}
+
+@media screen and (max-width:470px){
+    .carousel-indicators{
+        bottom:340px;
+    }
+    
+    .carousel-inner{
+        height: 550px;
+    }
+}
+
+.carousel-indicators-numbers li {
+    text-align: center;
+    text-indent: 0;
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    line-height: 30px;
+    color: #fff;
+    background-color: #999;
+    transition: all 0.25s ease;
+}
+.carousel-indicators-numbers li.active, .carousel-indicators-numbers li:hover {
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #001944;
+}

@@ -1,0 +1,43 @@
+.image_fond_schedule{position: fixed; right: 0; bottom: 0;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: -100;background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;background-size: cover;background-position: top;}
+.container-fluid{padding: 0px;}
+.section_schedule{position: relative;}
+.section_search{margin-top: 60px;background: #f7f7f7f7;height: 80px;}
+.bloc_search{padding: 12px;margin-left: 40%;width: 100%;}
+.bloc_search select{height: 70%;width: 180px;}
+.btn-md{height: 80%;}
+.form_coord_schedule{display: none;}
+iframe{width: 60%;position: absolute;}
+h1{font-size: 24px;font-weight: bold;padding-bottom: 4%;}
+video{height: 128%;width: 100%;}
+.bloc_schedule{background-color: rgba(44, 62, 80,0.5);background-image: url(https://cdn.surfair.com/app/uploads/2016/04/skyBG_afternoon1.jpg);margin-left: 60%;height: 600px;display: flex;flex-wrap: wrap;}
+.article_1{background-color: rgba(255,255,255,0.5);padding-top: 15%;padding-left: 2%;padding-right: 2%;width: 50%;height: 50%;}
+.article_2{padding: 10%;text-align: center;width: 50%;height: 50%;}
+.img_persons{width: 15px;height: 15px;}
+.article_3{padding: 10%;text-align: center;width: 50%;height: 50%;}
+.article_4{position: relative;width: 50%;height: 50%; }
+#mc_embed_signup{padding: 0 20px 0;}
+::-webkit-input-placeholder { text-align:center; }
+#mc-embedded-subscribe{margin: 1em 4em 14%;}   
+::-moz-placeholder { text-align:center; } /* firefox 19+ */
+:-ms-input-placeholder { text-align:center; } /* ie */
+input:-moz-placeholder { text-align:center; }
+
+.icon.clock{margin-left: 45%;margin-bottom: 25px;font-size: 0;position: relative;height: 34px;width: 34px;background: transparent;box-sizing: border-box;border-radius: 100%;border: 2px solid #0a253e;}
+.top{position: absolute;width: 2px;height: 2px;background: #0a253e;left: 0;right: 0;margin: 0 auto;} 
+.right{position: absolute;width: 2px;height: 2px;background: #0a253e;top: 0;bottom: 0;right: 0;margin: auto 0;} 
+.bottom{position: absolute;width: 2px;height: 2px;background: #0a253e;left: 0;right: 0;bottom: 0;margin: 0 auto;} 
+.left{position: absolute;width: 2px;height: 2px;background: #0a253e;top: 0;bottom: 0;left: 0;margin: auto 0;}
+
+.hour{width: 3px;height: 100%;position: absolute;left: 0;right: 0;margin: 0 auto;animation:time 3s infinite alternate;}
+.hour::before{position: absolute;content: "";background: #0a253e;height: 9px;width: 2px;top: 15px;}
+.minute{width: 2px;height: 100%;position: absolute;left: 0;right: 0;margin: 0 auto;animation:time 15s infinite linear;}
+.minute::before{position: absolute;content: "";background: #0a253e;height: 12px;width: 2px;top: 15px;}
+
+@keyframes time {to {transform:rotate(360deg)}}
+.flightinfo{position: absolute;width: 100%;bottom: 0;color: #fff;text-align: center;text-transform: uppercase;font-size: 18px;line-height: 2.4em;font-family: FFKievitWebProBold, Helvetica, Verdana, sans-serif;background-color: rgba(10,37,62,0.5);border: 1px solid rgba(10,37,62,0.5);}
+@media screen and (max-width:990px){.section_schedule{height: 1200px;}iframe{width: 100%;}.bloc_schedule{position: absolute;top:600px;margin-left: 0;width: 100%}}
+@media screen and (max-width:980px){#mc-embedded-subscribe{margin: 1em 0 1em 31%;}}
+@media screen and (max-width:870px){.bloc_search{margin-left: 16%;}}
+@media screen and (max-width:766px){#mc-embedded-subscribe{margin: 1em 0 1em 38%;}}
+@media screen and (max-width:700px){.bloc_search{margin-left: 0;}.bloc_search select{width: 34%;}}
+@media screen and (max-width:540px){#mc-embedded-subscribe{margin: 1em 0 1em 28%;}}

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('build/css/home.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
+    <style>
+        select{color:grey;}
+        .placeholder{color:#001644!important;}
+        .datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+            color: firebrick!important;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+
+{% if app.user %}
+ {% include 'partials/authentification/connected/homeBody.html.twig' %}
+{% else %}
+    {% include 'partials/authentification/diconnected/homeBody.html.twig' %}
+{% endif %}
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#booking_startDate').datepicker({
+            format: 'dd/mm/yyyy',
+            startDate: new Date()
+        });
+    });
+</script>
+
+{% endblock %}

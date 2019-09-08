@@ -1,0 +1,138 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Modification du vol numéro {{ flight.id }} {% endblock %}
+
+{% block stylesheets %}
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}" />
+    <style>
+        .image_fond_edit {
+            position: fixed; right: 0; bottom: 0;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto; z-index: -100;
+            background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+            background-size: cover;
+            background-position: top;
+        }
+        label{cursor: auto!important;}
+        .block-body{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .table{
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            border-collapse: collapse;
+        }
+        .table thead th{
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .table th, .table td{
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6
+        }
+    </style>
+    
+{% endblock %}
+
+{% block body %}
+<div class="image_fond_edit"></div>
+<div class="block-body">
+    <div class="col-sm-6" style="width:40%;">
+            {{ form_start(form) }}
+            
+            <div class="well">
+                <h2>Modification du vol {{ flight.numFlight }}</h2>
+                {{ form_label(form.numFlight) }}
+                {{ form_widget(form.numFlight) }}
+            <div id="datetimepicker1" class="input-append date">
+                    {{ form_label(form.hourDeparture) }}
+                    {{ form_widget(form.hourDeparture) }}
+                <span class="add-on">
+                <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                </i>
+                </span>
+            </div>
+            <div id="datetimepicker2" class="input-append date">
+                    {{ form_label(form.hourArrival) }}
+                    {{ form_widget(form.hourArrival) }}
+                <span class="add-on">
+                <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                </i>
+                </span>
+            </div>
+            <label for="airportDeparture">Aéroport de départ</label>
+            <select class="select" id="Departure" name="Departure">
+                <option class="placeholder" hidden>{{ flight.airportDeparture.nameAirport }}</option>
+                {% for airport in airports %}
+                <option class="placeholder">{{ airport.nameAirport }}</option>
+                {% endfor %}
+            </select>
+            <label for="airportDeparture">Aéroport d'arrivée</label>
+            <select class="select" id="Arrival" name="Arrival">
+                <option class="placeholder" hidden>{{ flight.airportArrival.nameAirport }}</option>
+                {% for airport in airports %}
+                    <option class="placeholder">{{ airport.nameAirport }}</option>
+                {% endfor %}
+            </select>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-check"></i>
+                    Enregistrer les modifications
+                </button>
+                <a href="{{ path('admin_flights_index') }}" class="btn btn-link" style="float:right;">
+                    <i class="fas fa-arrow-circle-left"></i>
+                    Retour au vols
+                </a>
+            </div>
+        </div>
+    {{ form_end(form) }}
+    </div>
+    <div class="col-sm-6" style="width: 40%;text-align: center;">
+        <div class="well">
+            <h2>Réservations</h2>
+            {% if bookings %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>N° RESERVATION</th>
+                        <th>UTILSATEUR</th>
+                        <th>SIEGE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in bookings %}
+                        <tr>
+                            <td>{{ booking.numBooking }}</td>
+                            <td><img src="{{ booking.booker.picture }}" alt="avatar de {{ booking.booker.fullName }}" class="avatar avatar-mini"> {{ booking.booker.fullName }}</td>
+                            <td>{{ booking.seat.numSeat }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+                <h4 style="text-align:center;color: firebrick;">Il n'y a aucune réservation</h4>
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/fr.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        $('#datetimepicker1,#datetimepicker2').datetimepicker({
+            format: 'dd/MM/yyyy hh:mm:ss',
+           language: 'fr'
+        });
+    });
+</script>
+{% endblock %}

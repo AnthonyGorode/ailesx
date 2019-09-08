@@ -1,0 +1,249 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+
+<style type="text/css">
+    .image_fond_invite {
+        position: fixed; right: 0; bottom: 0;
+        min-width: 100%; min-height: 100%;
+        width: auto; height: auto; z-index: -100;
+        background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    .container-fluid{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .content_invite{
+        position: relative;
+        padding-top: 60px;
+    }
+        .program_invite{
+            position: relative;
+
+            background: url(https://cdn.surfair.com/app/uploads/2016/04/skyBG_afternoon1.jpg) no-repeat;
+            background-position-y: -300px;
+            height: 320px;
+        }
+            .title_program_invite{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+                .partnairs_icon{
+                    width: 50px;
+                    height: 50px;
+                }
+            .content_program_invite{
+                position: relative;
+                text-align: center;
+            }
+                .bloc_share{
+                    position: absolute;
+                    left: 130px;
+                }
+                .bloc_join{
+                    position: absolute;
+                    left: 770px;
+                }
+                .bloc_rewards{
+                    position: absolute;
+                    left: 1400px;
+                }
+    .toggle_member{
+        position: absolute;
+        top: 367px;
+        left: 722px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color:#fff;
+        background-color: #777;
+        z-index: 1;
+    }
+        #member{
+            padding: 10px;
+            background-color: #777;
+            cursor: pointer;
+        }
+        #not_member{
+            padding: 12px;
+            background-color:#001944;
+            cursor: pointer;
+        }
+    .bloc_member{
+        position: relative;
+        background-color: #efefef;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+        legend{
+            font-size: 1.1rem;
+            text-align: center;
+            padding-bottom: 25px;
+        }
+        form{
+            text-align: center;
+            width: 50%;
+            margin: 100px;
+        }
+        fieldset{
+            width: 300px;
+        }
+        .member{
+            display: none;
+            width: 50%;
+            margin-left: 16%;
+        }
+            .member_info{
+                position: absolute;
+                top: 170px;left: 980px;
+            }
+        .not_member{
+            display: block;
+            width: 50%;
+            margin-left: 16%;
+        }
+
+    /* @Media queries */
+    @media screen and (max-width:1367px){
+        .bloc_share{
+            left: 25px;
+            
+        }
+        .bloc_join{
+            left: 520px;
+        }
+        .bloc_rewards{
+            left: 1026px;
+        }
+        .toggle_member{
+            left: 460px;
+        }
+        .member_info{
+            left: 700px;
+        }
+    }
+</style>
+
+{% endblock %}
+
+{% block body %}
+    <div class="image_fond_invite"></div>
+    <section class="content_invite">
+        <div class="program_invite">
+                
+            <div class="title_program_invite">
+                <h1>AILESX REFERRAL PROGRAM</h1>
+                <img class="partnairs_icon" src="https://cdn1.iconfinder.com/data/icons/ios-edge-line-5/25/Handshake-512.png">
+            </div>
+            <div class="content_program_invite">
+                <div class="bloc_share">
+                    <h3>STEP 1</h3>
+                    <h2>You Share</h2>
+                    <p>Send a unique links to your friends and family.</p>
+                </div>
+                <div class="bloc_join">
+                    <h3>STEP 2</h3>
+                    <h2>They Join</h2>
+                    <p>They use your link to become a Surf Air member.</p>
+                </div>
+                <div class="bloc_rewards">
+                    <h3>STEP 3</h3>
+                    <h2>Get Rewards</h2>
+                    <p>Get rewarded for every referral who joins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="toggle_member">
+            <span id="member">I'M A AILESX MEMBER</span>
+            <span id="not_member">I'M NOT A AILESX MEMBER</span>
+        </div>
+        <div class="bloc_member">
+            <div class="member" id="form_member">
+                <form>
+                    <fieldset>
+                        <legend>Sign up to get your unique share URL and manage referral status</legend>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="color:#0a253e;">EMAIL</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="color:#0a253e;">PASSWORD</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-lg" id="exampleInputPassword1" value="MEMBER LOGIN">
+                        </div>                       
+                    </fieldset>
+                </form>
+                <div class="member_info">
+                    <h3>As a referring Surf Air member, you earn:</h3>
+                    <p>- 1 round-trip premium guest flight.</p>
+                    <br>
+                    <h3>New member will earn:</h3>
+                    <p>- 1 round-trip premium guest flight.</p>
+                </div>
+            </div>
+            <div class="not_member">
+                <form>
+                    <fieldset>
+                        <legend>Sign up to get your unique share URL</legend>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="color:#0a253e;">FULL NAME</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="color:#0a253e;">EMAIL</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="color:#0a253e;">PHONE</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-lg" id="exampleInputPassword1" value="SIGN UP">
+                        </div>
+                        
+                    </fieldset>
+                </form>
+                <div class="member_info">
+                    <h3>When you refer, you earn:</h3>
+                    <p>- 1 round-trip premium guest flight.</p>
+                    <br>
+                    <h3>New member will earn:</h3>
+                    <p>- 1 round-trip premium guest flight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#member').on('click',function(){
+            $('.member').css('display','block');
+            $('.not_member').css('display','none');
+
+            $('#not_member').css('background-color','#777').css('padding','10px');
+            $('#member').css('background-color','#001944').css('padding','12px');
+        });
+        //  $('#test').click(function() {
+        //     $("html,body").animate( { scrollTop: $("#form_member").offset().top }, 1500);
+        // }); 
+        $('#not_member').on('click',function(){
+            $('.not_member').css('display','block');
+            $('.member').css('display','none');
+
+            $('#member').css('background-color','#777').css('padding','10px');
+            $('#not_member').css('background-color','#001944').css('padding','12px');
+        });
+    });
+    
+</script>
+
+{% endblock %} 

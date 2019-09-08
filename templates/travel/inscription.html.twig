@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<style type="text/css">
+    video#video {
+        position: fixed; right: 0; bottom: 0;
+        min-width: 100%; min-height: 100%;
+        width: auto; height: auto; z-index: -100;
+        background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+        background-size: cover;
+    }
+   
+    .bloc_login{
+        position:absolute;
+        top:-16%;left:36%;
+        
+
+        background: rgba(44, 62, 80,0.5);
+        color: aliceblue;
+
+        border: 1px solid #fff; 
+
+        padding:50px 60px; 
+        margin-top:16vh;
+        width:500px;
+
+        -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+        box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    }
+    .bloc_form{
+        margin: 30px;
+    }
+    #btn_inscription{
+        width:240px;
+        margin-left:30px; 
+        margin-top:25px;
+    }
+
+    /* media queries*/
+    @media screen and (max-width:1800px){
+
+    }
+    @media screen and (max-width:1600px){
+
+    }
+    @media screen and (max-width:1220px){
+        .bloc_login{
+            left:26%;
+        }
+    }
+
+    /* media queries pour tablettes */
+    @media screen and (max-width:992px){
+        .bloc_login{
+            left:18%;
+        }
+    }
+    /* media queries pour smartphones */
+    @media screen and (max-width:575px){
+        .bloc_login{
+            left:21%;
+        }
+    }
+     @media screen and (max-width:575px){
+        .bloc_login{
+            left:3%;
+            width:initial;
+        }
+         #btn_inscription{
+            width:262px;
+            margin-left:initial;
+        }
+    }
+    @media screen and (max-width:470px){
+        .bloc_login{
+            top: -16%;
+            left:4%;
+            width:initial;
+        }
+        .bloc_form{
+            margin: -29px;
+        }
+    }
+    @media screen and (max-width:575px) and (max-height:680px){
+        .bloc_login{
+            top:-6%;
+        }
+    }
+
+    @media screen and (max-width:1220px)and (max-height:820px){
+        .bloc_login{
+            top:-13%;
+        }
+    }
+    
+</style>
+{% endblock %}
+
+{% block body %}
+<video id="video" autoplay="" loop="" muted="">
+        <source src="https://cdn.surfair.com/wp-content/uploads/2018/04/04184631/Homepage-Video-Cuts_v4_Compressed.webmhd.webm" type="video/webm">
+        <source src="https://cdn.surfair.com/wp-content/uploads/2018/04/04184643/Homepage-Video-Cuts_v4_1.mp4" type="video/mp4">
+</video>
+
+<div class="page_login" style="position:relative;">
+    <div class="bloc_login">
+        <form class="bloc_form" id="connect" method="POST" action="search_login.php" style="display: block;">
+            <h3 style="margin-bottom:20px;text-align:center;">INSCRIPTION</h3>
+            <div class="form-group">
+                <label>NOM</label>
+                <input type="text" class="form-control" name="login_user" id="login_user" value="" placeholder="Enter name" required="">
+                <div><?php if ( (isset($errorLogin)) && ($errorLogin != "")) { echo $errorLogin; } ?></div>
+            </div>
+            <div class="form-group">
+                <label>PRENOM</label>
+                <input type="password" class="form-control" name="psw_user" id="psw_user" value="" placeholder="Enter firstname" required="">
+                <div><?php if ( (isset($errorPsw)) && ($errorPsw != "")) { echo $errorPsw; } ?></div>
+            </div>
+            <div class="form-group">
+                <label>EMAIL</label>
+                <input type="text" class="form-control" name="login_user" id="login_user" value="" placeholder="Enter mail" required="">
+                <div><?php if ( (isset($errorLogin)) && ($errorLogin != "")) { echo $errorLogin; } ?></div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>PASSWORD</label>
+                <input type="password" class="form-control" name="psw_user" id="psw_user" value="" placeholder="Enter password" required="">
+                <div><?php if ( (isset($errorPsw)) && ($errorPsw != "")) { echo $errorPsw; } ?></div>
+            </div>	
+             <div class="form-group">
+                <label>VERIFICATION PASSWORD</label>
+                <input type="password" class="form-control" name="psw_user" id="psw_user" value="" placeholder="Enter password again" required="">
+                <div><?php if ( (isset($errorPsw)) && ($errorPsw != "")) { echo $errorPsw; } ?></div>
+            </div>
+            <br>
+             <div class="form-group">
+                <label>DESTINATION PRINCIPALE</label>
+                <input type="password" class="form-control" name="psw_user" id="psw_user" value="" placeholder="Enter first destination" required="">
+                <div><?php if ( (isset($errorPsw)) && ($errorPsw != "")) { echo $errorPsw; } ?></div>
+            </div>							
+            <input type="submit" id="btn_inscription" class="btn btn-primary btn-lg" value="INSCRITPION">
+        </form>
+    </div>
+</div>
+
+<div class="height_screen fixed-bottom" style="font-size:50px; color:blue;bottom:76px;"></div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+
+        $(window).on('resize',function(){
+            let size = $(window).height();
+            size = size - 82;
+            $(".page_login").attr('style',`position:relative; height: ${size}px;`);
+            $(".height_screen").html(`height : ${size}`);        
+        });
+
+        let size = $(window).height();
+        size = size-82;
+        $(".page_login").attr('style',`position:relative; height: ${size}px;`);
+        $(".height_screen").html(`height : ${size}`);
+
+    </script>
+{% endblock %}

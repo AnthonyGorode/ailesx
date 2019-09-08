@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('build/css/destination.css') }}">
+{% endblock %}
+    
+{% block body %}
+<div class="image_fond_destination"></div>
+    <section>
+        <h1>Now serving 2 destinations in France<br> with many more to come</h1>
+        <div class="row bloc_destination">
+            <div class="col-md-12 col-lg-6" style="padding:15px;">
+                <div class="img_montpellier">
+                    <div class="btn_mont">
+                        <a class="button" href="#">Montpellier</a>
+                        <p> 1heure de temps porte-à-porte à partir de Toulouse.</p>
+                    </div>
+                    <div class="fond"></div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6" style="padding:15px;">
+                <div class="img_toulouse">
+                    <div class="btn_toul">
+                        <a class="button" href="#">Toulouse</a>
+                        <p>1heure de temps porte-à-porte à partir de Montpellier.</p>
+                    </div>
+                    <div class="fond"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}liste des vols{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 mb-5 text-center">
+                <span>De :</span>
+                <h3>{{ flight.airportDeparture.nameAirport }}</h3>
+                <p>{{ flight.airportDeparture.city.nameCity }}</p>
+                <div>Depart : {{ flight.hourDeparture | date('d/m/y') }} à {{ flight.hourDeparture | date('H:i') }}</div>
+            </div>
+            <div class="col-sm-6 text-center">
+                <span>à :</span>
+                <h3>{{ flight.airportArrival.nameAirport }}</h3>
+                <p>{{ flight.airportArrival.city.nameCity }}</p>
+                <div>Arrivée : {{ flight.hourArrival | date('d/m/y') }} à {{ flight.hourArrival | date('H:i') }}</div>
+            </div>          
+            {% if everBooking == 0 %}
+            <form action="{{ path('flight_booking',{'id':flight.id}) }}" method="post" class="col-sm-12 text-center">
+                    <h3>Choississez votre siège</h3>
+                    <select class="select" id="oneSeat" name="oneSeat">
+                        <option hidden></option>
+                        {% for seat in seats %}
+                        <option>{{ seat.seat.numSeat }}</option>
+                        {% endfor %}
+                    </select>
+                    <hr>
+                    <button type="submit" class="btn btn-primary mt-5 mb-5">RESERVER</button>
+                    <hr>
+            </form>
+            {% else %}
+            <div class="alert alert-dismissible alert-warning text-center col-12">
+                <h4 class="alert-heading">Désolé</h4>
+                <p class="mb-0">Vous avez déjà réserver un siège pour ce vol.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

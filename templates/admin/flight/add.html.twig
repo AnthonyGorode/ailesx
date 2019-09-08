@@ -1,0 +1,99 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Création d'un vol {% endblock %}
+
+{% block stylesheets %}
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}" />
+    <style>
+        .image_fond_add {
+            position: fixed; right: 0; bottom: 0;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto; z-index: -100;
+            background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;
+            background-size: cover;
+            background-position: top;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="image_fond_add"></div>
+<div class="container">
+    <div class="col-sm-6" style="margin-right:60%;">
+        {{ form_start(form) }}
+            
+            <div class="well">
+                <h2 style="text-align:center;">Création d'un vol</h2>
+                {{ form_label(form.numFlight) }}
+                {{ form_widget(form.numFlight) }}
+                <div id="datetimepicker1" class="input-append date">
+                        {{ form_label(form.hourDeparture) }}
+                        {{ form_widget(form.hourDeparture) }}
+                    <span class="add-on">
+                    <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                    </i>
+                    </span>
+                </div>
+                <div id="datetimepicker2" class="input-append date">
+                        {{ form_label(form.hourArrival) }}
+                        {{ form_widget(form.hourArrival) }}
+                    <span class="add-on">
+                    <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                    </i>
+                    </span>
+                </div>
+                <label for="jets">Selectionner le jet</label>
+                <select class="select" id="jet" name="jet">
+                    <option class="placeholder" hidden></option>
+                    {% for jet in jets %}
+                    <option class="placeholder">{{ jet.typeJet }}</option>
+                    {% endfor %}
+                </select>
+                <label for="airportDeparture">Aéroport de départ</label>
+                <select class="select" id="Departure" name="Departure">
+                    <option class="placeholder" hidden></option>
+                    {% for airport in airports %}
+                    <option class="placeholder">{{ airport.nameAirport }}</option>
+                    {% endfor %}
+                </select>
+                <label for="airportDeparture">Aéroport d'arrivée</label>
+                <select class="select" id="Arrival" name="Arrival">
+                    <option class="placeholder" hidden></option>
+                    {% for airport in airports %}
+                        <option class="placeholder">{{ airport.nameAirport }}</option>
+                    {% endfor %}
+                </select>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-check"></i>
+                        Enregistrer le vol
+                    </button>
+                    <a href="{{ path('admin_flights_index') }}" class="btn btn-link" style="float:right;">
+                        <i class="fas fa-arrow-circle-left"></i>
+                        Retour au vols
+                    </a>
+                </div>
+            </div>
+        {{ form_end(form) }}
+    </div>
+    <div class="col-sm-6" style="float:left;">
+        
+    </div>
+
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/fr.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        $('#datetimepicker1,#datetimepicker2').datetimepicker({
+            format: 'dd/MM/yyyy hh:mm:ss',
+           language: 'fr'
+        });
+    });
+</script>
+{% endblock %}

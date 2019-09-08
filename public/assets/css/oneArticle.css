@@ -1,0 +1,13 @@
+.container-fluid{padding-left: 0px;padding-right: 0px;}
+.bloc_article{padding-top:7%;padding-bottom: 15%;}
+.image_fond_oneArticle{position: fixed; right: 0; bottom: 0;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: -100;background: url(https://ailesx.com/wp-content/uploads/2018/10/Analysis2.jpg) no-repeat;background-size: cover;background-position: top;}
+.container_article{background: #f7f7f7f7;height: 100%;}
+.bloc1{padding-bottom: 5%;}
+/* .info_oneArticle{} */
+.title_oneArticle{text-align: center;font-weight: 300;font-size: 65px;}
+.child_title{color: #018db0;font-weight: bold;padding: 1%;}
+.content_oneArticle{padding: 1%;font-size: 22px;}
+.img_oneArticle{height: 300px!important;}
+.content_img{color: #018db0;font-style: italic;}
+.last_content{padding-top: 20%;padding-left: 16%;font-size:26px;font-weight: bold;}
+@media screen and (max-width:800px){.bloc_article{padding-top:14%;}.title_oneArticle{text-align: center;font-weight: 300;font-size: 3em;}}

@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <link href="{{asset('build/css/schedule.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+<div class="image_fond_schedule"></div>
+    <section class="row section_search">
+        <div class="bloc_search">
+            <select class="select">
+                <option hidden>From</option>
+                <option>Montpellier</option>
+                <option>Toulouse</option>
+                <option>Lyon</option>
+                <option>Lille</option>
+                <option>Paris</option>
+            </select>
+            <select class="select">
+                <option hidden>To</option>
+                <option>Toulouse</option>
+                <option>Lyon</option>
+                <option>Lille</option>
+                <option>Paris</option>
+            </select>
+            <button id="btn_search" class="btn btn-primary btn-md">Rechercher</button>
+        </div>
+       
+    </section>
+    <section class="section_schedule">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1Zo2zA1kO_sMlwchFwV6SQN-zKgZhFgMq" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+       <div class="bloc_schedule">
+            <div class="col-lg-12 col-sm-12 form_coord_schedule" style="padding:0px!important;color: #efefef;">
+            <div class="row marg" style="height:70px;"></div>
+            <div class="row marg">                      
+                <div class="col-1"></div>
+                <div class="col-12">
+                    <fieldset>
+                        <legend style="color:#efefef;text-align:center;">Explore AilesX memberships</legend>
+                        <p style="color:#efefef;text-align: center;">AilesX innovative membership ooptions make traveling anywhere in Montpellier quick, simple and comfortable.</p>
+                    </fieldset>
+                    <div class="row marg">
+                        <div class="col-1 col-sm-2"></div>
+                        <div id="mc_embed_signup" class="col-12 col-sm-8">
+                                <form action="https://ailesx.us20.list-manage.com/subscribe/post?u=0c87e4fbb14602c959ce2cdca&amp;id=67afe62961" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                        
+                                    <fieldset id="mc_embed_signup_scroll">
+                                        <div class="mc-field-group">
+                                            <input type="text" name="FNAME" class="form-control required" id="mce-FNAME" aria-describedby="emailHelp" placeholder="FULL NAME">
+                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                        <div class="mc-field-group">
+                                            <input type="email" name="EMAIL" class="form-control required email" id="mce-EMAIL" aria-describedby="emailHelp" placeholder="EMAIL">
+                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                        <div class="mc-field-group">
+                                            <input type="text" name="MMERGE5" class="form-control" id="mce-MMERGE5" placeholder="PHONE">
+                                        </div>
+                                        <div class="mc-field-group">
+                                            <input type="text" name="MMERGE2" class="" id="mce-MMERGE2" placeholder="ZIP CODE">
+                                        </div>
+                                        <div id="mce-responses" class="clear">
+                                            <div class="response" id="mce-error-response" style="display:none"></div>
+                                            <div class="response" id="mce-success-response" style="display:none"></div>
+                                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0c87e4fbb14602c959ce2cdca_67afe62961" tabindex="-1" value=""></div>
+                                        <div class="clear">
+                                            <input type="submit" name="subscribe" class="offset-2 offset-sm-4 offset-lg-2 btn btn-primary btn-md" id="mc-embedded-subscribe" value="REQUEST INFO">
+                                        </div>                                    
+                                    </fieldset>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        
+            <div class="article_schedule article_1">
+                <h1>No more waiting in line for boarding</h1>
+                <p>Walk on to the plane straight from the terminal, just moments before take-off.</p>
+            </div>
+            <div class="article_schedule article_2">
+                <img class="img_persons" src="https://cdn3.iconfinder.com/data/icons/inficons-set-2/512/search-512.png">
+                <p><b>20</b></p>
+                <p>Members currently flying</p>
+            </div>
+            <div class="article_schedule article_3">
+                <div class="icon clock">
+                    <div class="top"></div>
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="hour"></div>
+                    <div class="minute"></div>
+                </div>
+                <p><b>134,639</b></p>
+                <p>Estimated hours saved</p>
+            </div>
+            <div class="article_schedule article_4" style="background-image:url(https://cdn.surfair.com/app/uploads/2016/04/Poster-Image_schedule_03.jpg);">
+                <video src="https://cdn.surfair.com/app/uploads/2016/04/Window-Video_schedule_03.mp4" autoplay="" loop="">
+                    <source src="https://cdn.surfair.com/app/uploads/2016/04/Window-Video_schedule_03.mp4" type="video/mp4">
+                    <source src="https://cdn.surfair.com/app/uploads/2016/04/Window-Video_schedule_03.webmhd.webm" type="video/webm">
+                </video>
+                <div class="flightinfo">
+                    HHR
+                    <i class="fas fa-arrow-right"></i>
+                    SBA    
+                </div>
+            
+            </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript' src='{{asset("js/scheduleMin.js")}}'></script>
+
+{% endblock %}

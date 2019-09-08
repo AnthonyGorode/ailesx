@@ -1,0 +1,55 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des Aéroports{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <h1 class="my-5">Gestion des Aéroports</h1>
+<form action="{{ path('admin_destination_index',{'concat' : 'concact'}) }}" method="GET" class="form-inline my-2 float-right">
+    <input class="form-control mr-sm-2" type="search" name="concact" placeholder="Search">
+    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+</form>
+<div class="form-group">
+    <a href="{{ path('admin_flights_new') }}" class="btn btn-primary">
+        <i class="fas fa-plus-circle"></i>
+        Ajouter un Aéroport
+    </a>
+</div>
+    {% set entity = 'App\Entity\Airport' %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>
+                    <a href="{{ path('admin_destination_index',{'column' : 'a.nameAirport' ,'order' : 'ASC' ,'concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aéroport&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_destination_index',{'column' : 'a.nameAirport' ,'order' : 'DESC' ,'concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_destination_index',{'column' : 'ac.nameCity' ,'order' : 'ASC', 'concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ville&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_destination_index',{'column' : 'ac.nameCity' ,'order' : 'DESC', 'concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for destination in pagination.data  %}
+            <tr>
+                {% dump(destination) %}
+                <td>{{ destination.id }}</td>
+                <td>{{ destination.nameAirport }}</td>
+                <td>{{ destination.nameCity }}</td>
+                <td>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {{ pagination.display() }}
+</div>
+{% endblock %} 

@@ -1,0 +1,93 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des réservations{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <h1 class="my-5">Gestion des réservations</h1>
+    <form action="{{ path('admin_bookings_index',{'concat' : 'concact'}) }}" method="GET" class="form-inline my-2 float-right">
+        <input class="form-control mr-sm-2" type="search" name="concact" placeholder="Search">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>   
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>                   
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bf.numFlight' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numéro vol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bf.numFlight' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_bookings_index',{'column' : 'numBooking' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numéro reservation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_bookings_index',{'column' : 'numBooking' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bs.numSeat' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numéro siège&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bs.numSeat' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bu.lastName' ,'order' : 'ASC','concat' : concatenation}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utilisateurs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bu.lastName' ,'order' : 'DESC','concat' : concatenation}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bookingCreatedAt' ,'order' : 'ASC'}) }}"><i class="fas fa-chevron-down"></i></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date réservation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ path('admin_bookings_index',{'column' : 'bookingCreatedAt' ,'order' : 'DESC'}) }}"><i class="fas fa-chevron-up"></i></a>
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% set uniqueFlight = "" %}
+            {% set flag = 0 %}
+
+            {% for booking in pagination.data  %}
+            {% set counter = ( counter | default(0) ) + 1 %}   
+            <tr>
+                {% if uniqueFlight != "" and uniqueFlight != booking.numFlight %}
+                    {% set flag = 0  %}
+                    {% set counter = 1 %}
+                {% endif %}
+
+                {% if flag == 0 %}
+                    <td>{{ booking.numFlight }}</td>
+                    {% set uniqueFlight = booking.numFlight %}
+                    {% set flag = 1 %}
+                {% endif %}
+                {% if counter > 1 %}
+                    <td style="border-top: 1px solid transparent;border-bottom: 1px solid transparent;background-color: #EFEBC4;"></td>
+                {% endif %}
+                
+
+                {% if booking.numBooking is empty %}
+                    <td>Null</td>
+                {% else %}
+                    <td>{{ booking.numBooking }}</td>
+                {% endif %}
+                <td>{{ booking.numSeat }}</td>
+                {% if booking.lastName is empty %}
+                    <td>Null</td>
+                {% else %}
+                    <td><img src="{{ booking.picture }}" alt="avatar de {{ booking.lastName }} {{ booking.firstName }}" class="avatar avatar-mini"> {{ booking.lastName }} {{ booking.firstName }}</td>
+                {% endif %}
+                {% if booking.bookingCreatedAt is empty %}
+                    <td>Null</td>
+                {% else %}
+                    <td>{{ booking.bookingCreatedAt | date('d/m/Y H:i') }}</td>
+                {% endif %}
+                <td>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {{ pagination.display() }}
+</div>
+{% endblock %} 

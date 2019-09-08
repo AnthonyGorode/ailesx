@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="{{asset('img/cadenas.jpg')}}" type="image/x-icon">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        {% if controller_page is not defined %}
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('css/bootswatch.min.css') }}">
+        {% endif %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/baseMin.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        <style type="text/css">
+            .container-fluid{
+                padding-right:0;
+                padding-left:0;
+            }
+            .image_fond_admin_base{position: fixed; right: 0; bottom: 0;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: -100;background: url(https://cdn.surfair.com/app/uploads/2016/04/skyBG_afternoon1.jpg) no-repeat;background-size: cover;background-position: top;}
+            h1{text-align:center;text-transform:uppercase;background-color: #2c3e50;margin: 0 34% 0;border-radius: 15px;color:white;}
+            .departure{text-decoration: underline;margin-bottom: 0;font-size: 20px;}
+            .page-link{background-color: rgb(44,62,80)!important;}
+            .page-link:hover{background-color: rgba(44,62,80, 0.9)!important;}
+            .btn-primary-custom{background-color: #001944;}
+        </style>
+         {% if controller_page is not defined %}
+        <style>
+            table{background-color: rgba(228, 228, 228,0.55);font-size: 17px;text-align: center;}
+        </style>
+        {% endif %}
+    </head>
+    <body>
+    <div class="image_fond_admin_base"></div>
+    <div class="container-fluid">
+        <div class="image_fond">
+            
+            {% include 'admin/partials/header.html.twig' %} 
+
+            {% if controller_page is not defined %}
+                <div style="height:70px;"></div>
+            {% endif %}
+            {% for label,messages in app.flashes %}
+                <div class="container" style="margin-top:4rem;">
+                    <div class="alert alert-{{ label }}">
+                        {% for message in messages %}
+                        <p>{{ message | raw }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+            {% block body %}{% endblock %}
+    
+            {% if page_controller is not defined %}
+            <footer>
+                {% include 'admin/partials/footer.html.twig' %}
+            </footer>
+            {% endif %}
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ asset('js/baseMin.js') }}" crossorigin="anonymous"></script>
+    {% block javascripts %}{% endblock %}  
+
+    </body>
+</html>

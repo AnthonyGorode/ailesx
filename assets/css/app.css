@@ -1,0 +1,33 @@
+@import url('./aircraft.css');
+@import url('./animation.css');
+@import url('./base.css');
+@import url('./bootstrap-datetimepicker.min.css');
+@import url('./destination.css');
+@import url('./experience.css');
+@import url('./home.css');
+@import url('./login.css');
+@import url('./oneArticle.css');
+@import url('./report.css');
+@import url('./schedule.css');
+@import url('./tarifs.css');
+
+.avatar{
+    max-width: 128px;
+    max-height: 128px;
+    border-radius: 50%;
+}
+
+.avatar-medium{
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.avatar-mini{
+    max-width: 30px;
+    max-height: 30px;
+    vertical-align: bottom;
+}
+
+.menu-account::after{
+    border-top:0.1em solid!important;
+}
