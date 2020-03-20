@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use PDO;
 use Doctrine\Common\Persistence\ObjectManager;
 
 
@@ -12,11 +13,23 @@ class StatsAilesx{
         $this->manager = $manager;
     }
 
+    public function setGlobalVariableOnlyGroupByMySql(){
+        $pdo  = new PDO('mysql:host=localhost;charset=utf8', 'root', '');
+        $query = 'SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,"ONLY_FULL_GROUP_BY",""))';
+
+        $resultDb = $pdo->prepare($query);
+        $resultDb->execute();
+
+        $pdo = null;
+    }
+
     public function getStats(){
         $users = $this->getUsersCount();
         $flights = $this->getFlightsCount();
         $bookings = $this->getBookingsCount();
         $airports = $this->getDestinationsCount();
+
+        dump(compact('users','flights', 'bookings', 'airports'));
 
         return compact('users','flights', 'bookings', 'airports');
     }
@@ -37,7 +50,9 @@ class StatsAilesx{
     }
 
     public function getUsersCount(){
-        return $this->manager->createQuery('SELECT COUNT(u) FROM App\Entity\User u')->getSingleScalarResult();
+        $countUser = $this->manager->createQuery('SELECT COUNT(u) FROM App\Entity\User u')->getSingleScalarResult();
+        
+        return $countUser;
     }
 
     public function getFlightsCount(){

@@ -52,7 +52,18 @@ class FlightRepository extends ServiceEntityRepository
         // sinon affiche seulement le résultat de la recherche
         if(empty($concat)){
             return $this->createQueryBuilder('f')
-                        ->select('count(fb.booker) as countBooker','count(fb.seat) as countSeat','f.numFlight','f.id','fd.id as idAirportDeparture','fd.nameAirport as airportDeparture','fa.id as idAirportArrival','fa.nameAirport as airportArrival','f.hourDeparture','f.hourArrival')
+                        ->select(
+                            'count(fb.booker) as countBooker',
+                            'count(fb.seat) as countSeat',
+                            'f.numFlight',
+                            'f.id',
+                            'fd.id as idAirportDeparture',
+                            'fd.nameAirport as airportDeparture',
+                            'fa.id as idAirportArrival',
+                            'fa.nameAirport as airportArrival',
+                            'f.hourDeparture',
+                            'f.hourArrival'
+                        )
                         ->leftJoin('f.bookings','fb')
                         ->leftJoin('f.airportDeparture','fd')
                         ->leftJoin('f.airportArrival','fa')

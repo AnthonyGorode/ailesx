@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Users\antho\Documents\Projets\Symfony\ailesx\src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src=".js/html5shiv.min.js"></script>
+  <script src=".js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">C:\Users\antho\Documents\Projets\Symfony\ailesx\src</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Form/AccountType.php.html#15">App\Form\AccountType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/PasswordUpdateType.php.html#11">App\Form\PasswordUpdateType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#9">App\Service\Paginator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#15">App\Repository\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/AirportType.php.html#10">App\Form\AirportType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ApplicationType.php.html#7">App\Form\ApplicationType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingType.php.html#13">App\Form\BookingType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/FlightType.php.html#18">App\Form\FlightType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationRoleType.php.html#10">App\Form\RegistrationRoleType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#12">App\Entity\Role</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationType.php.html#18">App\Form\RegistrationType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/SeatRepository.php.html#15">App\Repository\SeatRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20190430094607.php.html#13">DoctrineMigrations\Version20190430094607</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AirportRepository.php.html#15">App\Repository\AirportRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#16">App\Repository\BookingRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/JetRepository.php.html#15">App\Repository\JetRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#14">App\Entity\Seat</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#7">App\Entity\PasswordUpdate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/RoleRepository.php.html#15">App\Repository\RoleRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/FlightController.php.html#21">App\Controller\FlightController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminBookingController.php.html#14">App\Controller\AdminBookingController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminDashboardController.php.html#13">App\Controller\AdminDashboardController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminDestinationController.php.html#13">App\Controller\AdminDestinationController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#23">App\Controller\AdminFlightController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminUserController.php.html#18">App\Controller\AdminUserController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#16">App\Controller\BookingController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HomeController.php.html#9">App\Controller\HomeController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#14">App\Entity\Jet</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#9">App\Service\PaginatorDql</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#9">App\Controller\UserController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#19">App\DataFixtures\AppFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#12">App\Entity\Airport</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#12">App\Entity\Booking</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#12">App\Entity\City</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#12">App\Entity\Flight</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PasswordUpdateRepository.php.html#15">App\Repository\PasswordUpdateRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/FlightRepository.php.html#16">App\Repository\FlightRepository</a></td><td class="text-right">3%</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#19">App\Controller\AccountController</a></td><td class="text-right">10%</td></tr>
+       <tr><td><a href="Entity/User.php.html#22">App\Entity\User</a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="Kernel.php.html#12">App\Kernel</a></td><td class="text-right">27%</td></tr>
+       <tr><td><a href="Service/StatsAilesx.php.html#9">App\Service\StatsAilesx</a></td><td class="text-right">34%</td></tr>
+       <tr><td><a href="Controller/TravelController.php.html#11">App\Controller\TravelController</a></td><td class="text-right">44%</td></tr>
+       <tr><td><a href="Controller/AdminAccountController.php.html#11">App\Controller\AdminAccountController</a></td><td class="text-right">54%</td></tr>
+       <tr><td><a href="Service/ActivityListener.php.html#13">App\Service\ActivityListener</a></td><td class="text-right">75%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Entity/User.php.html#22">App\Entity\User</a></td><td class="text-right">1148</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#9">App\Service\PaginatorDql</a></td><td class="text-right">930</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#12">App\Entity\Flight</a></td><td class="text-right">702</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#12">App\Entity\Booking</a></td><td class="text-right">600</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#12">App\Entity\Airport</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#9">App\Service\Paginator</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#14">App\Entity\Seat</a></td><td class="text-right">462</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#14">App\Entity\Jet</a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#19">App\Controller\AccountController</a></td><td class="text-right">177</td></tr>
+       <tr><td><a href="Entity/City.php.html#12">App\Entity\City</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Entity/Role.php.html#12">App\Entity\Role</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#7">App\Entity\PasswordUpdate</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#16">App\Repository\BookingRepository</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#19">App\DataFixtures\AppFixtures</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#23">App\Controller\AdminFlightController</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Controller/AdminUserController.php.html#18">App\Controller\AdminUserController</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Controller/TravelController.php.html#11">App\Controller\TravelController</a></td><td class="text-right">47</td></tr>
+       <tr><td><a href="Repository/AirportRepository.php.html#15">App\Repository\AirportRepository</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/FlightController.php.html#21">App\Controller\FlightController</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#15">App\Repository\UserRepository</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Repository/FlightRepository.php.html#16">App\Repository\FlightRepository</a></td><td class="text-right">27</td></tr>
+       <tr><td><a href="Kernel.php.html#12">App\Kernel</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="Controller/AdminBookingController.php.html#14">App\Controller\AdminBookingController</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#16">App\Controller\BookingController</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/AdminDestinationController.php.html#13">App\Controller\AdminDestinationController</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/ActivityListener.php.html#13">App\Service\ActivityListener</a></td><td class="text-right">5</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/AccountController.php.html#49"><abbr title="App\Controller\AccountController::autoLogout">autoLogout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AirportRepository.php.html#43"><abbr title="App\Repository\AirportRepository::findAirport">findAirport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationRoleType.php.html#12"><abbr title="App\Form\RegistrationRoleType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationRoleType.php.html#29"><abbr title="App\Form\RegistrationRoleType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationType.php.html#20"><abbr title="App\Form\RegistrationType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationType.php.html#32"><abbr title="App\Form\RegistrationType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#28"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#40"><abbr title="App\Kernel::configureRoutes">configureRoutes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20190430094607.php.html#15"><abbr title="DoctrineMigrations\Version20190430094607::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20190430094607.php.html#20"><abbr title="DoctrineMigrations\Version20190430094607::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20190430094607.php.html#45"><abbr title="DoctrineMigrations\Version20190430094607::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AirportRepository.php.html#17"><abbr title="App\Repository\AirportRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AirportRepository.php.html#27"><abbr title="App\Repository\AirportRepository::findIdAirport">findIdAirport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/AirportRepository.php.html#63"><abbr title="App\Repository\AirportRepository::adminArray">adminArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/PasswordUpdateType.php.html#13"><abbr title="App\Form\PasswordUpdateType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#18"><abbr title="App\Repository\BookingRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#28"><abbr title="App\Repository\BookingRepository::findAllSeatsForOneFlight">findAllSeatsForOneFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#45"><abbr title="App\Repository\BookingRepository::findOneBooking">findOneBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#63"><abbr title="App\Repository\BookingRepository::findAllBookingUser">findAllBookingUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#82"><abbr title="App\Repository\BookingRepository::updateBooking">updateBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#100"><abbr title="App\Repository\BookingRepository::adminArray">adminArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#144"><abbr title="App\Repository\BookingRepository::countArray">countArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#165"><abbr title="App\Repository\BookingRepository::findUniqueIdFlight">findUniqueIdFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/FlightRepository.php.html#29"><abbr title="App\Repository\FlightRepository::updateAirportFlight">updateAirportFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/FlightRepository.php.html#50"><abbr title="App\Repository\FlightRepository::adminArray">adminArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/FlightRepository.php.html#90"><abbr title="App\Repository\FlightRepository::flightToday">flightToday</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/PasswordUpdateType.php.html#22"><abbr title="App\Form\PasswordUpdateType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/FlightType.php.html#36"><abbr title="App\Form\FlightType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PasswordUpdateRepository.php.html#17"><abbr title="App\Repository\PasswordUpdateRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#258"><abbr title="App\Entity\User::addBooking">addBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#164"><abbr title="App\Entity\User::getPicture">getPicture</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#169"><abbr title="App\Entity\User::setPicture">setPicture</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#176"><abbr title="App\Entity\User::getHash">getHash</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#181"><abbr title="App\Entity\User::setHash">setHash</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#193"><abbr title="App\Entity\User::setSlug">setSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#210"><abbr title="App\Entity\User::getPassword">getPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#216"><abbr title="App\Entity\User::getUsername">getUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#225"><abbr title="App\Entity\User::getUserRoles">getUserRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#230"><abbr title="App\Entity\User::addUserRole">addUserRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#240"><abbr title="App\Entity\User::removeUserRole">removeUserRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#253"><abbr title="App\Entity\User::getBookings">getBookings</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#268"><abbr title="App\Entity\User::removeBooking">removeBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/FlightType.php.html#22"><abbr title="App\Form\FlightType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#281"><abbr title="App\Entity\User::getLastActivity">getLastActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#286"><abbr title="App\Entity\User::setLastActivity">setLastActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#293"><abbr title="App\Entity\User::getConnected">getConnected</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#298"><abbr title="App\Entity\User::setConnected">setConnected</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/AccountType.php.html#17"><abbr title="App\Form\AccountType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/AccountType.php.html#31"><abbr title="App\Form\AccountType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/AirportType.php.html#12"><abbr title="App\Form\AirportType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/AirportType.php.html#20"><abbr title="App\Form\AirportType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ApplicationType.php.html#16"><abbr title="App\Form\ApplicationType::getConfiguration">getConfiguration</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingType.php.html#15"><abbr title="App\Form\BookingType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingType.php.html#23"><abbr title="App\Form\BookingType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/JetRepository.php.html#17"><abbr title="App\Repository\JetRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/RoleRepository.php.html#17"><abbr title="App\Repository\RoleRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#63"><abbr title="App\Controller\AccountController::preLogout">preLogout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#112"><abbr title="App\Service\PaginatorDql::getPages">getPages</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#50"><abbr title="App\Service\PaginatorDql::setColumn">setColumn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#56"><abbr title="App\Service\PaginatorDql::getColumn">getColumn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#60"><abbr title="App\Service\PaginatorDql::setOrder">setOrder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#66"><abbr title="App\Service\PaginatorDql::getOrder">getOrder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#70"><abbr title="App\Service\PaginatorDql::setEntityClassPage">setEntityClassPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#76"><abbr title="App\Service\PaginatorDql::getEntityClassPage">getEntityClassPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#80"><abbr title="App\Service\PaginatorDql::setTemplatePath">setTemplatePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#86"><abbr title="App\Service\PaginatorDql::getTemplatePath">getTemplatePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#90"><abbr title="App\Service\PaginatorDql::setRoute">setRoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#96"><abbr title="App\Service\PaginatorDql::getRoute">getRoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#101"><abbr title="App\Service\PaginatorDql::display">display</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#151"><abbr title="App\Service\PaginatorDql::getData">getData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#40"><abbr title="App\Service\PaginatorDql::setFunction">setFunction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#166"><abbr title="App\Service\PaginatorDql::setEntityClass">setEntityClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#172"><abbr title="App\Service\PaginatorDql::getEntityClass">getEntityClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#176"><abbr title="App\Service\PaginatorDql::setLimit">setLimit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#182"><abbr title="App\Service\PaginatorDql::getLimit">getLimit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#186"><abbr title="App\Service\PaginatorDql::setPage">setPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#192"><abbr title="App\Service\PaginatorDql::getPage">getPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/StatsAilesx.php.html#26"><abbr title="App\Service\StatsAilesx::getStats">getStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/StatsAilesx.php.html#37"><abbr title="App\Service\StatsAilesx::getDestinationStats">getDestinationStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/StatsAilesx.php.html#52"><abbr title="App\Service\StatsAilesx::getUsersCount">getUsersCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/StatsAilesx.php.html#58"><abbr title="App\Service\StatsAilesx::getFlightsCount">getFlightsCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/StatsAilesx.php.html#62"><abbr title="App\Service\StatsAilesx::getBookingsCount">getBookingsCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#46"><abbr title="App\Service\PaginatorDql::getFunction">getFunction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#36"><abbr title="App\Service\PaginatorDql::getConcat">getConcat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/SeatRepository.php.html#17"><abbr title="App\Repository\SeatRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#53"><abbr title="App\Service\Paginator::getTemplatePath">getTemplatePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/SeatRepository.php.html#27"><abbr title="App\Repository\SeatRepository::findAllSeatByJet">findAllSeatByJet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#17"><abbr title="App\Repository\UserRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#33"><abbr title="App\Repository\UserRepository::adminArray">adminArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#67"><abbr title="App\Repository\UserRepository::countArray">countArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#84"><abbr title="App\Repository\UserRepository::getActive">getActive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#20"><abbr title="App\Service\Paginator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#27"><abbr title="App\Service\Paginator::setColumn">setColumn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#33"><abbr title="App\Service\Paginator::getColumn">getColumn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#37"><abbr title="App\Service\Paginator::setOrder">setOrder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#43"><abbr title="App\Service\Paginator::getOrder">getOrder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#47"><abbr title="App\Service\Paginator::setTemplatePath">setTemplatePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#57"><abbr title="App\Service\Paginator::setRoute">setRoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#30"><abbr title="App\Service\PaginatorDql::setConcat">setConcat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#63"><abbr title="App\Service\Paginator::getRoute">getRoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#68"><abbr title="App\Service\Paginator::display">display</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#78"><abbr title="App\Service\Paginator::getPages">getPages</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#92"><abbr title="App\Service\Paginator::getDataDql">getDataDql</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#107"><abbr title="App\Service\Paginator::getData">getData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#122"><abbr title="App\Service\Paginator::setEntityClass">setEntityClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#128"><abbr title="App\Service\Paginator::getEntityClass">getEntityClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#132"><abbr title="App\Service\Paginator::setLimit">setLimit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#138"><abbr title="App\Service\Paginator::getLimit">getLimit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#142"><abbr title="App\Service\Paginator::setPage">setPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#148"><abbr title="App\Service\Paginator::getPage">getPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#23"><abbr title="App\Service\PaginatorDql::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#157"><abbr title="App\Entity\User::setEmail">setEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#152"><abbr title="App\Entity\User::getEmail">getEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#140"><abbr title="App\Entity\User::getLastName">getLastName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#89"><abbr title="App\Entity\Booking::setSeat">setSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#70"><abbr title="App\Entity\Airport::setCity">setCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#80"><abbr title="App\Entity\Airport::getFlights">getFlights</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#85"><abbr title="App\Entity\Airport::addFlight">addFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#95"><abbr title="App\Entity\Airport::removeFlight">removeFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#111"><abbr title="App\Entity\Airport::getFlightsArrival">getFlightsArrival</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#116"><abbr title="App\Entity\Airport::addFlightsArrival">addFlightsArrival</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#126"><abbr title="App\Entity\Airport::removeFlightsArrival">removeFlightsArrival</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#67"><abbr title="App\Entity\Booking::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#72"><abbr title="App\Entity\Booking::getBooker">getBooker</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#77"><abbr title="App\Entity\Booking::setBooker">setBooker</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#84"><abbr title="App\Entity\Booking::getSeat">getSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#96"><abbr title="App\Entity\Booking::getNumBooking">getNumBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#58"><abbr title="App\Entity\Airport::setNameAirport">setNameAirport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#101"><abbr title="App\Entity\Booking::setNumBooking">setNumBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#108"><abbr title="App\Entity\Booking::getFlight">getFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#113"><abbr title="App\Entity\Booking::setFlight">setFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#120"><abbr title="App\Entity\Booking::getActiveSeat">getActiveSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#125"><abbr title="App\Entity\Booking::setActiveSeat">setActiveSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#132"><abbr title="App\Entity\Booking::getBookingCreatedAt">getBookingCreatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#137"><abbr title="App\Entity\Booking::setBookingCreatedAt">setBookingCreatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#31"><abbr title="App\Entity\City::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#36"><abbr title="App\Entity\City::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#41"><abbr title="App\Entity\City::getNameCity">getNameCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#46"><abbr title="App\Entity\City::setNameCity">setNameCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#65"><abbr title="App\Entity\Airport::getCity">getCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#53"><abbr title="App\Entity\Airport::getNameAirport">getNameAirport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#128"><abbr title="App\Entity\User::getFirstName">getFirstName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#95"><abbr title="App\Controller\AdminFlightController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#78"><abbr title="App\Controller\AccountController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#90"><abbr title="App\Controller\AccountController::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#126"><abbr title="App\Controller\AccountController::profile">profile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#157"><abbr title="App\Controller\AccountController::updatePassword">updatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#206"><abbr title="App\Controller\AccountController::myAccount">myAccount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminAccountController.php.html#38"><abbr title="App\Controller\AdminAccountController::preLogout">preLogout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminAccountController.php.html#53"><abbr title="App\Controller\AdminAccountController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminBookingController.php.html#19"><abbr title="App\Controller\AdminBookingController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminDashboardController.php.html#18"><abbr title="App\Controller\AdminDashboardController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminDestinationController.php.html#20"><abbr title="App\Controller\AdminDestinationController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#32"><abbr title="App\Controller\AdminFlightController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#137"><abbr title="App\Controller\AdminFlightController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#48"><abbr title="App\Entity\Airport::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminUserController.php.html#27"><abbr title="App\Controller\AdminUserController::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminUserController.php.html#75"><abbr title="App\Controller\AdminUserController::deleteUser">deleteUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AdminUserController.php.html#92"><abbr title="App\Controller\AdminUserController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#26"><abbr title="App\Controller\BookingController::bookingUser">bookingUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/FlightController.php.html#31"><abbr title="App\Controller\FlightController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/FlightController.php.html#48"><abbr title="App\Controller\FlightController::book">book</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HomeController.php.html#14"><abbr title="App\Controller\HomeController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HomeController.php.html#23"><abbr title="App\Controller\HomeController::number">number</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#14"><abbr title="App\Controller\UserController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#24"><abbr title="App\DataFixtures\AppFixtures::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#28"><abbr title="App\DataFixtures\AppFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#42"><abbr title="App\Entity\Airport::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#56"><abbr title="App\Entity\City::getAirports">getAirports</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#61"><abbr title="App\Entity\City::addAirport">addAirport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/City.php.html#71"><abbr title="App\Entity\City::removeAirport">removeAirport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#63"><abbr title="App\Entity\Seat::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#46"><abbr title="App\Entity\PasswordUpdate::getConfirmPassword">getConfirmPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#51"><abbr title="App\Entity\PasswordUpdate::setConfirmPassword">setConfirmPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#31"><abbr title="App\Entity\Role::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#36"><abbr title="App\Entity\Role::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#41"><abbr title="App\Entity\Role::getTitle">getTitle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#46"><abbr title="App\Entity\Role::setTitle">setTitle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#56"><abbr title="App\Entity\Role::getUsers">getUsers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#61"><abbr title="App\Entity\Role::addUser">addUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Role.php.html#70"><abbr title="App\Entity\Role::removeUser">removeUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#51"><abbr title="App\Entity\Seat::initializeSlug">initializeSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#58"><abbr title="App\Entity\Seat::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#68"><abbr title="App\Entity\Seat::getNumSeat">getNumSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#53"><abbr title="App\Entity\Flight::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#73"><abbr title="App\Entity\Seat::setNumSeat">setNumSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#80"><abbr title="App\Entity\Seat::getJet">getJet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#85"><abbr title="App\Entity\Seat::setJet">setJet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#95"><abbr title="App\Entity\Seat::getBookings">getBookings</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#100"><abbr title="App\Entity\Seat::addBooking">addBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#110"><abbr title="App\Entity\Seat::removeBooking">removeBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#123"><abbr title="App\Entity\Seat::getSlug">getSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#128"><abbr title="App\Entity\Seat::setSlug">setSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#91"><abbr title="App\Entity\User::isActiveNow">isActiveNow</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#98"><abbr title="App\Entity\User::getFullName">getFullName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#123"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#39"><abbr title="App\Entity\PasswordUpdate::setNewPassword">setNewPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#34"><abbr title="App\Entity\PasswordUpdate::getNewPassword">getNewPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#27"><abbr title="App\Entity\PasswordUpdate::setOldPassword">setOldPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#22"><abbr title="App\Entity\PasswordUpdate::getOldPassword">getOldPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#59"><abbr title="App\Entity\Flight::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#64"><abbr title="App\Entity\Flight::getNumFlight">getNumFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#69"><abbr title="App\Entity\Flight::setNumFlight">setNumFlight</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#76"><abbr title="App\Entity\Flight::getAirportDeparture">getAirportDeparture</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#81"><abbr title="App\Entity\Flight::setAirportDeparture">setAirportDeparture</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#88"><abbr title="App\Entity\Flight::getAirportArrival">getAirportArrival</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#93"><abbr title="App\Entity\Flight::setAirportArrival">setAirportArrival</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#100"><abbr title="App\Entity\Flight::getHourDeparture">getHourDeparture</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#105"><abbr title="App\Entity\Flight::setHourDeparture">setHourDeparture</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#112"><abbr title="App\Entity\Flight::getHourArrival">getHourArrival</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#117"><abbr title="App\Entity\Flight::setHourArrival">setHourArrival</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#127"><abbr title="App\Entity\Flight::getBookings">getBookings</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#132"><abbr title="App\Entity\Flight::addBooking">addBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#142"><abbr title="App\Entity\Flight::removeBooking">removeBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#45"><abbr title="App\Entity\Jet::initializeSlug">initializeSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#52"><abbr title="App\Entity\Jet::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#57"><abbr title="App\Entity\Jet::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#62"><abbr title="App\Entity\Jet::getTypeJet">getTypeJet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#67"><abbr title="App\Entity\Jet::setTypeJet">setTypeJet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#77"><abbr title="App\Entity\Jet::getSeats">getSeats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#82"><abbr title="App\Entity\Jet::addSeat">addSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#92"><abbr title="App\Entity\Jet::removeSeat">removeSeat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#105"><abbr title="App\Entity\Jet::getSlug">getSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#110"><abbr title="App\Entity\Jet::setSlug">setSlug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/StatsAilesx.php.html#66"><abbr title="App\Service\StatsAilesx::getDestinationsCount">getDestinationsCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/TravelController.php.html#20"><abbr title="App\Controller\TravelController::home">home</abbr></a></td><td class="text-right">41%</td></tr>
+       <tr><td><a href="Entity/User.php.html#201"><abbr title="App\Entity\User::anonymousFunction:201#766">anonymousFunction:201#766</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Service/ActivityListener.php.html#28"><abbr title="App\Service\ActivityListener::onCoreController">onCoreController</abbr></a></td><td class="text-right">69%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#28"><abbr title="App\DataFixtures\AppFixtures::load">load</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/TravelController.php.html#20"><abbr title="App\Controller\TravelController::home">home</abbr></a></td><td class="text-right">46</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#112"><abbr title="App\Service\PaginatorDql::getPages">getPages</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#157"><abbr title="App\Controller\AccountController::updatePassword">updatePassword</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#32"><abbr title="App\Controller\AdminFlightController::add">add</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/AdminUserController.php.html#27"><abbr title="App\Controller\AdminUserController::register">register</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/FlightController.php.html#48"><abbr title="App\Controller\FlightController::book">book</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#90"><abbr title="App\Controller\AccountController::register">register</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#95"><abbr title="App\Entity\Airport::removeFlight">removeFlight</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/User.php.html#268"><abbr title="App\Entity\User::removeBooking">removeBooking</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#110"><abbr title="App\Entity\Seat::removeBooking">removeBooking</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#92"><abbr title="App\Entity\Jet::removeSeat">removeSeat</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/AccountController.php.html#126"><abbr title="App\Controller\AccountController::profile">profile</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/City.php.html#71"><abbr title="App\Entity\City::removeAirport">removeAirport</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#126"><abbr title="App\Entity\Airport::removeFlightsArrival">removeFlightsArrival</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#142"><abbr title="App\Entity\Flight::removeBooking">removeBooking</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#95"><abbr title="App\Controller\AdminFlightController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#65"><abbr title="App\Entity\Airport::getCity">getCity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#100"><abbr title="App\Entity\Seat::addBooking">addBooking</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#152"><abbr title="App\Entity\User::getEmail">getEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#140"><abbr title="App\Entity\User::getLastName">getLastName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#128"><abbr title="App\Entity\User::getFirstName">getFirstName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#123"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#123"><abbr title="App\Entity\Seat::getSlug">getSlug</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#85"><abbr title="App\Entity\Seat::setJet">setJet</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#169"><abbr title="App\Entity\User::setPicture">setPicture</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#80"><abbr title="App\Entity\Seat::getJet">getJet</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#68"><abbr title="App\Entity\Seat::getNumSeat">getNumSeat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#63"><abbr title="App\Entity\Seat::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Seat.php.html#51"><abbr title="App\Entity\Seat::initializeSlug">initializeSlug</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Role.php.html#70"><abbr title="App\Entity\Role::removeUser">removeUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Role.php.html#61"><abbr title="App\Entity\Role::addUser">addUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Role.php.html#41"><abbr title="App\Entity\Role::getTitle">getTitle</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#164"><abbr title="App\Entity\User::getPicture">getPicture</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#176"><abbr title="App\Entity\User::getHash">getHash</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#46"><abbr title="App\Entity\PasswordUpdate::getConfirmPassword">getConfirmPassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/BookingRepository.php.html#100"><abbr title="App\Repository\BookingRepository::adminArray">adminArray</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/AdminBookingController.php.html#19"><abbr title="App\Controller\AdminBookingController::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#107"><abbr title="App\Service\Paginator::getData">getData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#92"><abbr title="App\Service\Paginator::getDataDql">getDataDql</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/Paginator.php.html#78"><abbr title="App\Service\Paginator::getPages">getPages</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#33"><abbr title="App\Repository\UserRepository::adminArray">adminArray</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/FlightRepository.php.html#50"><abbr title="App\Repository\FlightRepository::adminArray">adminArray</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/AirportRepository.php.html#63"><abbr title="App\Repository\AirportRepository::adminArray">adminArray</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#230"><abbr title="App\Entity\User::addUserRole">addUserRole</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#298"><abbr title="App\Entity\User::setConnected">setConnected</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#293"><abbr title="App\Entity\User::getConnected">getConnected</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#286"><abbr title="App\Entity\User::setLastActivity">setLastActivity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#281"><abbr title="App\Entity\User::getLastActivity">getLastActivity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/AdminDestinationController.php.html#20"><abbr title="App\Controller\AdminDestinationController::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#258"><abbr title="App\Entity\User::addBooking">addBooking</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#240"><abbr title="App\Entity\User::removeUserRole">removeUserRole</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Role.php.html#36"><abbr title="App\Entity\Role::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#34"><abbr title="App\Entity\PasswordUpdate::getNewPassword">getNewPassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#70"><abbr title="App\Entity\Airport::setCity">setCity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#89"><abbr title="App\Entity\Booking::setSeat">setSeat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#137"><abbr title="App\Entity\Booking::setBookingCreatedAt">setBookingCreatedAt</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#132"><abbr title="App\Entity\Booking::getBookingCreatedAt">getBookingCreatedAt</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#120"><abbr title="App\Entity\Booking::getActiveSeat">getActiveSeat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#113"><abbr title="App\Entity\Booking::setFlight">setFlight</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#108"><abbr title="App\Entity\Booking::getFlight">getFlight</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#96"><abbr title="App\Entity\Booking::getNumBooking">getNumBooking</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#84"><abbr title="App\Entity\Booking::getSeat">getSeat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/City.php.html#41"><abbr title="App\Entity\City::getNameCity">getNameCity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#77"><abbr title="App\Entity\Booking::setBooker">setBooker</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#72"><abbr title="App\Entity\Booking::getBooker">getBooker</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#67"><abbr title="App\Entity\Booking::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#48"><abbr title="App\Entity\Airport::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#116"><abbr title="App\Entity\Airport::addFlightsArrival">addFlightsArrival</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#53"><abbr title="App\Entity\Airport::getNameAirport">getNameAirport</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Airport.php.html#85"><abbr title="App\Entity\Airport::addFlight">addFlight</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/City.php.html#36"><abbr title="App\Entity\City::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/City.php.html#61"><abbr title="App\Entity\City::addAirport">addAirport</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/PasswordUpdate.php.html#22"><abbr title="App\Entity\PasswordUpdate::getOldPassword">getOldPassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#26"><abbr title="App\Controller\BookingController::bookingUser">bookingUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#105"><abbr title="App\Entity\Jet::getSlug">getSlug</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/AdminFlightController.php.html#137"><abbr title="App\Controller\AdminFlightController::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#82"><abbr title="App\Entity\Jet::addSeat">addSeat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#62"><abbr title="App\Entity\Jet::getTypeJet">getTypeJet</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#57"><abbr title="App\Entity\Jet::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Jet.php.html#45"><abbr title="App\Entity\Jet::initializeSlug">initializeSlug</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/AdminUserController.php.html#92"><abbr title="App\Controller\AdminUserController::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#132"><abbr title="App\Entity\Flight::addBooking">addBooking</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#112"><abbr title="App\Entity\Flight::getHourArrival">getHourArrival</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#100"><abbr title="App\Entity\Flight::getHourDeparture">getHourDeparture</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#93"><abbr title="App\Entity\Flight::setAirportArrival">setAirportArrival</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#88"><abbr title="App\Entity\Flight::getAirportArrival">getAirportArrival</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#81"><abbr title="App\Entity\Flight::setAirportDeparture">setAirportDeparture</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#76"><abbr title="App\Entity\Flight::getAirportDeparture">getAirportDeparture</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#64"><abbr title="App\Entity\Flight::getNumFlight">getNumFlight</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Flight.php.html#59"><abbr title="App\Entity\Flight::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/PaginatorDql.php.html#151"><abbr title="App\Service\PaginatorDql::getData">getData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/ActivityListener.php.html#28"><abbr title="App\Service\ActivityListener::onCoreController">onCoreController</abbr></a></td><td class="text-right">4</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.3.2</a> using <a href="https://secure.php.net/" target="_top">PHP 7.2.19</a> with <a href="https://xdebug.org/">Xdebug 2.7.2</a> and <a href="https://phpunit.de/">PHPUnit 6.5.14</a> at Tue Sep 10 9:40:59 UTC 2019.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/bootstrap.min.js" type="text/javascript"></script>
+  <script src=".js/holder.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([36,1,1,2,1,1,1,0,1,0,0,1], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([225,0,0,0,0,1,1,1,0,0,0,17], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[10.344827586206897,15,"<a href=\"Controller\/AccountController.php.html#19\">App\\Controller\\AccountController<\/a>"],[54.54545454545454,3,"<a href=\"Controller\/AdminAccountController.php.html#11\">App\\Controller\\AdminAccountController<\/a>"],[0,2,"<a href=\"Controller\/AdminBookingController.php.html#14\">App\\Controller\\AdminBookingController<\/a>"],[0,1,"<a href=\"Controller\/AdminDashboardController.php.html#13\">App\\Controller\\AdminDashboardController<\/a>"],[0,2,"<a href=\"Controller\/AdminDestinationController.php.html#13\">App\\Controller\\AdminDestinationController<\/a>"],[0,9,"<a href=\"Controller\/AdminFlightController.php.html#23\">App\\Controller\\AdminFlightController<\/a>"],[0,7,"<a href=\"Controller\/AdminUserController.php.html#18\">App\\Controller\\AdminUserController<\/a>"],[0,2,"<a href=\"Controller\/BookingController.php.html#16\">App\\Controller\\BookingController<\/a>"],[0,5,"<a href=\"Controller\/FlightController.php.html#21\">App\\Controller\\FlightController<\/a>"],[0,2,"<a href=\"Controller\/HomeController.php.html#9\">App\\Controller\\HomeController<\/a>"],[44.73684210526316,14,"<a href=\"Controller\/TravelController.php.html#11\">App\\Controller\\TravelController<\/a>"],[0,1,"<a href=\"Controller\/UserController.php.html#9\">App\\Controller\\UserController<\/a>"],[0,9,"<a href=\"DataFixtures\/AppFixtures.php.html#19\">App\\DataFixtures\\AppFixtures<\/a>"],[0,22,"<a href=\"Entity\/Airport.php.html#12\">App\\Entity\\Airport<\/a>"],[0,24,"<a href=\"Entity\/Booking.php.html#12\">App\\Entity\\Booking<\/a>"],[0,12,"<a href=\"Entity\/City.php.html#12\">App\\Entity\\City<\/a>"],[0,26,"<a href=\"Entity\/Flight.php.html#12\">App\\Entity\\Flight<\/a>"],[0,17,"<a href=\"Entity\/Jet.php.html#14\">App\\Entity\\Jet<\/a>"],[0,9,"<a href=\"Entity\/PasswordUpdate.php.html#7\">App\\Entity\\PasswordUpdate<\/a>"],[0,11,"<a href=\"Entity\/Role.php.html#12\">App\\Entity\\Role<\/a>"],[0,21,"<a href=\"Entity\/Seat.php.html#14\">App\\Entity\\Seat<\/a>"],[25,51,"<a href=\"Entity\/User.php.html#22\">App\\Entity\\User<\/a>"],[0,2,"<a href=\"Form\/AccountType.php.html#15\">App\\Form\\AccountType<\/a>"],[0,2,"<a href=\"Form\/AirportType.php.html#10\">App\\Form\\AirportType<\/a>"],[0,1,"<a href=\"Form\/ApplicationType.php.html#7\">App\\Form\\ApplicationType<\/a>"],[0,2,"<a href=\"Form\/BookingType.php.html#13\">App\\Form\\BookingType<\/a>"],[0,2,"<a href=\"Form\/FlightType.php.html#18\">App\\Form\\FlightType<\/a>"],[0,2,"<a href=\"Form\/PasswordUpdateType.php.html#11\">App\\Form\\PasswordUpdateType<\/a>"],[0,2,"<a href=\"Form\/RegistrationRoleType.php.html#10\">App\\Form\\RegistrationRoleType<\/a>"],[0,2,"<a href=\"Form\/RegistrationType.php.html#18\">App\\Form\\RegistrationType<\/a>"],[27.77777777777778,5,"<a href=\"Kernel.php.html#12\">App\\Kernel<\/a>"],[0,3,"<a href=\"Migrations\/Version20190430094607.php.html#13\">DoctrineMigrations\\Version20190430094607<\/a>"],[0,5,"<a href=\"Repository\/AirportRepository.php.html#15\">App\\Repository\\AirportRepository<\/a>"],[0,9,"<a href=\"Repository\/BookingRepository.php.html#16\">App\\Repository\\BookingRepository<\/a>"],[100,1,"<a href=\"Repository\/CityRepository.php.html#15\">App\\Repository\\CityRepository<\/a>"],[3.9215686274509802,5,"<a href=\"Repository\/FlightRepository.php.html#16\">App\\Repository\\FlightRepository<\/a>"],[0,1,"<a href=\"Repository\/JetRepository.php.html#15\">App\\Repository\\JetRepository<\/a>"],[0,1,"<a href=\"Repository\/PasswordUpdateRepository.php.html#15\">App\\Repository\\PasswordUpdateRepository<\/a>"],[0,1,"<a href=\"Repository\/RoleRepository.php.html#15\">App\\Repository\\RoleRepository<\/a>"],[0,2,"<a href=\"Repository\/SeatRepository.php.html#15\">App\\Repository\\SeatRepository<\/a>"],[0,5,"<a href=\"Repository\/UserRepository.php.html#15\">App\\Repository\\UserRepository<\/a>"],[75,5,"<a href=\"Service\/ActivityListener.php.html#13\">App\\Service\\ActivityListener<\/a>"],[0,22,"<a href=\"Service\/Paginator.php.html#9\">App\\Service\\Paginator<\/a>"],[0,30,"<a href=\"Service\/PaginatorDql.php.html#9\">App\\Service\\PaginatorDql<\/a>"],[34.78260869565217,8,"<a href=\"Service\/StatsAilesx.php.html#9\">App\\Service\\StatsAilesx<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Controller\/AccountController.php.html#29\">App\\Controller\\AccountController::login<\/a>"],[0,1,"<a href=\"Controller\/AccountController.php.html#49\">App\\Controller\\AccountController::autoLogout<\/a>"],[0,1,"<a href=\"Controller\/AccountController.php.html#63\">App\\Controller\\AccountController::preLogout<\/a>"],[0,1,"<a href=\"Controller\/AccountController.php.html#78\">App\\Controller\\AccountController::logout<\/a>"],[0,3,"<a href=\"Controller\/AccountController.php.html#90\">App\\Controller\\AccountController::register<\/a>"],[0,3,"<a href=\"Controller\/AccountController.php.html#126\">App\\Controller\\AccountController::profile<\/a>"],[0,4,"<a href=\"Controller\/AccountController.php.html#157\">App\\Controller\\AccountController::updatePassword<\/a>"],[0,1,"<a href=\"Controller\/AccountController.php.html#206\">App\\Controller\\AccountController::myAccount<\/a>"],[100,1,"<a href=\"Controller\/AdminAccountController.php.html#16\">App\\Controller\\AdminAccountController::login<\/a>"],[0,1,"<a href=\"Controller\/AdminAccountController.php.html#38\">App\\Controller\\AdminAccountController::preLogout<\/a>"],[0,1,"<a href=\"Controller\/AdminAccountController.php.html#53\">App\\Controller\\AdminAccountController::logout<\/a>"],[0,2,"<a href=\"Controller\/AdminBookingController.php.html#19\">App\\Controller\\AdminBookingController::index<\/a>"],[0,1,"<a href=\"Controller\/AdminDashboardController.php.html#18\">App\\Controller\\AdminDashboardController::index<\/a>"],[0,2,"<a href=\"Controller\/AdminDestinationController.php.html#20\">App\\Controller\\AdminDestinationController::index<\/a>"],[0,4,"<a href=\"Controller\/AdminFlightController.php.html#32\">App\\Controller\\AdminFlightController::add<\/a>"],[0,3,"<a href=\"Controller\/AdminFlightController.php.html#95\">App\\Controller\\AdminFlightController::edit<\/a>"],[0,2,"<a href=\"Controller\/AdminFlightController.php.html#137\">App\\Controller\\AdminFlightController::index<\/a>"],[0,4,"<a href=\"Controller\/AdminUserController.php.html#27\">App\\Controller\\AdminUserController::register<\/a>"],[0,1,"<a href=\"Controller\/AdminUserController.php.html#75\">App\\Controller\\AdminUserController::deleteUser<\/a>"],[0,2,"<a href=\"Controller\/AdminUserController.php.html#92\">App\\Controller\\AdminUserController::index<\/a>"],[0,2,"<a href=\"Controller\/BookingController.php.html#26\">App\\Controller\\BookingController::bookingUser<\/a>"],[0,1,"<a href=\"Controller\/FlightController.php.html#31\">App\\Controller\\FlightController::index<\/a>"],[0,4,"<a href=\"Controller\/FlightController.php.html#48\">App\\Controller\\FlightController::book<\/a>"],[0,1,"<a href=\"Controller\/HomeController.php.html#14\">App\\Controller\\HomeController::index<\/a>"],[0,1,"<a href=\"Controller\/HomeController.php.html#23\">App\\Controller\\HomeController::number<\/a>"],[41.66666666666667,13,"<a href=\"Controller\/TravelController.php.html#20\">App\\Controller\\TravelController::home<\/a>"],[100,1,"<a href=\"Controller\/TravelController.php.html#80\">App\\Controller\\TravelController::index<\/a>"],[0,1,"<a href=\"Controller\/UserController.php.html#14\">App\\Controller\\UserController::index<\/a>"],[0,1,"<a href=\"DataFixtures\/AppFixtures.php.html#24\">App\\DataFixtures\\AppFixtures::__construct<\/a>"],[0,8,"<a href=\"DataFixtures\/AppFixtures.php.html#28\">App\\DataFixtures\\AppFixtures::load<\/a>"],[0,1,"<a href=\"Entity\/Airport.php.html#42\">App\\Entity\\Airport::__construct<\/a>"],[0,2,"<a href=\"Entity\/Airport.php.html#48\">App\\Entity\\Airport::getId<\/a>"],[0,2,"<a href=\"Entity\/Airport.php.html#53\">App\\Entity\\Airport::getNameAirport<\/a>"],[0,1,"<a href=\"Entity\/Airport.php.html#58\">App\\Entity\\Airport::setNameAirport<\/a>"],[0,2,"<a href=\"Entity\/Airport.php.html#65\">App\\Entity\\Airport::getCity<\/a>"],[0,2,"<a href=\"Entity\/Airport.php.html#70\">App\\Entity\\Airport::setCity<\/a>"],[0,1,"<a href=\"Entity\/Airport.php.html#80\">App\\Entity\\Airport::getFlights<\/a>"],[0,2,"<a href=\"Entity\/Airport.php.html#85\">App\\Entity\\Airport::addFlight<\/a>"],[0,3,"<a href=\"Entity\/Airport.php.html#95\">App\\Entity\\Airport::removeFlight<\/a>"],[0,1,"<a href=\"Entity\/Airport.php.html#111\">App\\Entity\\Airport::getFlightsArrival<\/a>"],[0,2,"<a href=\"Entity\/Airport.php.html#116\">App\\Entity\\Airport::addFlightsArrival<\/a>"],[0,3,"<a href=\"Entity\/Airport.php.html#126\">App\\Entity\\Airport::removeFlightsArrival<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#67\">App\\Entity\\Booking::getId<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#72\">App\\Entity\\Booking::getBooker<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#77\">App\\Entity\\Booking::setBooker<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#84\">App\\Entity\\Booking::getSeat<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#89\">App\\Entity\\Booking::setSeat<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#96\">App\\Entity\\Booking::getNumBooking<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#101\">App\\Entity\\Booking::setNumBooking<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#108\">App\\Entity\\Booking::getFlight<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#113\">App\\Entity\\Booking::setFlight<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#120\">App\\Entity\\Booking::getActiveSeat<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#125\">App\\Entity\\Booking::setActiveSeat<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#132\">App\\Entity\\Booking::getBookingCreatedAt<\/a>"],[0,2,"<a href=\"Entity\/Booking.php.html#137\">App\\Entity\\Booking::setBookingCreatedAt<\/a>"],[0,1,"<a href=\"Entity\/City.php.html#31\">App\\Entity\\City::__construct<\/a>"],[0,2,"<a href=\"Entity\/City.php.html#36\">App\\Entity\\City::getId<\/a>"],[0,2,"<a href=\"Entity\/City.php.html#41\">App\\Entity\\City::getNameCity<\/a>"],[0,1,"<a href=\"Entity\/City.php.html#46\">App\\Entity\\City::setNameCity<\/a>"],[0,1,"<a href=\"Entity\/City.php.html#56\">App\\Entity\\City::getAirports<\/a>"],[0,2,"<a href=\"Entity\/City.php.html#61\">App\\Entity\\City::addAirport<\/a>"],[0,3,"<a href=\"Entity\/City.php.html#71\">App\\Entity\\City::removeAirport<\/a>"],[0,1,"<a href=\"Entity\/Flight.php.html#53\">App\\Entity\\Flight::__construct<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#59\">App\\Entity\\Flight::getId<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#64\">App\\Entity\\Flight::getNumFlight<\/a>"],[0,1,"<a href=\"Entity\/Flight.php.html#69\">App\\Entity\\Flight::setNumFlight<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#76\">App\\Entity\\Flight::getAirportDeparture<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#81\">App\\Entity\\Flight::setAirportDeparture<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#88\">App\\Entity\\Flight::getAirportArrival<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#93\">App\\Entity\\Flight::setAirportArrival<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#100\">App\\Entity\\Flight::getHourDeparture<\/a>"],[0,1,"<a href=\"Entity\/Flight.php.html#105\">App\\Entity\\Flight::setHourDeparture<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#112\">App\\Entity\\Flight::getHourArrival<\/a>"],[0,1,"<a href=\"Entity\/Flight.php.html#117\">App\\Entity\\Flight::setHourArrival<\/a>"],[0,1,"<a href=\"Entity\/Flight.php.html#127\">App\\Entity\\Flight::getBookings<\/a>"],[0,2,"<a href=\"Entity\/Flight.php.html#132\">App\\Entity\\Flight::addBooking<\/a>"],[0,3,"<a href=\"Entity\/Flight.php.html#142\">App\\Entity\\Flight::removeBooking<\/a>"],[0,2,"<a href=\"Entity\/Jet.php.html#45\">App\\Entity\\Jet::initializeSlug<\/a>"],[0,1,"<a href=\"Entity\/Jet.php.html#52\">App\\Entity\\Jet::__construct<\/a>"],[0,2,"<a href=\"Entity\/Jet.php.html#57\">App\\Entity\\Jet::getId<\/a>"],[0,2,"<a href=\"Entity\/Jet.php.html#62\">App\\Entity\\Jet::getTypeJet<\/a>"],[0,1,"<a href=\"Entity\/Jet.php.html#67\">App\\Entity\\Jet::setTypeJet<\/a>"],[0,1,"<a href=\"Entity\/Jet.php.html#77\">App\\Entity\\Jet::getSeats<\/a>"],[0,2,"<a href=\"Entity\/Jet.php.html#82\">App\\Entity\\Jet::addSeat<\/a>"],[0,3,"<a href=\"Entity\/Jet.php.html#92\">App\\Entity\\Jet::removeSeat<\/a>"],[0,2,"<a href=\"Entity\/Jet.php.html#105\">App\\Entity\\Jet::getSlug<\/a>"],[0,1,"<a href=\"Entity\/Jet.php.html#110\">App\\Entity\\Jet::setSlug<\/a>"],[0,2,"<a href=\"Entity\/PasswordUpdate.php.html#22\">App\\Entity\\PasswordUpdate::getOldPassword<\/a>"],[0,1,"<a href=\"Entity\/PasswordUpdate.php.html#27\">App\\Entity\\PasswordUpdate::setOldPassword<\/a>"],[0,2,"<a href=\"Entity\/PasswordUpdate.php.html#34\">App\\Entity\\PasswordUpdate::getNewPassword<\/a>"],[0,1,"<a href=\"Entity\/PasswordUpdate.php.html#39\">App\\Entity\\PasswordUpdate::setNewPassword<\/a>"],[0,2,"<a href=\"Entity\/PasswordUpdate.php.html#46\">App\\Entity\\PasswordUpdate::getConfirmPassword<\/a>"],[0,1,"<a href=\"Entity\/PasswordUpdate.php.html#51\">App\\Entity\\PasswordUpdate::setConfirmPassword<\/a>"],[0,1,"<a href=\"Entity\/Role.php.html#31\">App\\Entity\\Role::__construct<\/a>"],[0,2,"<a href=\"Entity\/Role.php.html#36\">App\\Entity\\Role::getId<\/a>"],[0,2,"<a href=\"Entity\/Role.php.html#41\">App\\Entity\\Role::getTitle<\/a>"],[0,1,"<a href=\"Entity\/Role.php.html#46\">App\\Entity\\Role::setTitle<\/a>"],[0,1,"<a href=\"Entity\/Role.php.html#56\">App\\Entity\\Role::getUsers<\/a>"],[0,2,"<a href=\"Entity\/Role.php.html#61\">App\\Entity\\Role::addUser<\/a>"],[0,2,"<a href=\"Entity\/Role.php.html#70\">App\\Entity\\Role::removeUser<\/a>"],[0,2,"<a href=\"Entity\/Seat.php.html#51\">App\\Entity\\Seat::initializeSlug<\/a>"],[0,1,"<a href=\"Entity\/Seat.php.html#58\">App\\Entity\\Seat::__construct<\/a>"],[0,2,"<a href=\"Entity\/Seat.php.html#63\">App\\Entity\\Seat::getId<\/a>"],[0,2,"<a href=\"Entity\/Seat.php.html#68\">App\\Entity\\Seat::getNumSeat<\/a>"],[0,1,"<a href=\"Entity\/Seat.php.html#73\">App\\Entity\\Seat::setNumSeat<\/a>"],[0,2,"<a href=\"Entity\/Seat.php.html#80\">App\\Entity\\Seat::getJet<\/a>"],[0,2,"<a href=\"Entity\/Seat.php.html#85\">App\\Entity\\Seat::setJet<\/a>"],[0,1,"<a href=\"Entity\/Seat.php.html#95\">App\\Entity\\Seat::getBookings<\/a>"],[0,2,"<a href=\"Entity\/Seat.php.html#100\">App\\Entity\\Seat::addBooking<\/a>"],[0,3,"<a href=\"Entity\/Seat.php.html#110\">App\\Entity\\Seat::removeBooking<\/a>"],[0,2,"<a href=\"Entity\/Seat.php.html#123\">App\\Entity\\Seat::getSlug<\/a>"],[0,1,"<a href=\"Entity\/Seat.php.html#128\">App\\Entity\\Seat::setSlug<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#91\">App\\Entity\\User::isActiveNow<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#98\">App\\Entity\\User::getFullName<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#109\">App\\Entity\\User::initializeSlug<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#116\">App\\Entity\\User::__construct<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#123\">App\\Entity\\User::getId<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#128\">App\\Entity\\User::getFirstName<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#133\">App\\Entity\\User::setFirstName<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#140\">App\\Entity\\User::getLastName<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#145\">App\\Entity\\User::setLastName<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#152\">App\\Entity\\User::getEmail<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#157\">App\\Entity\\User::setEmail<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#164\">App\\Entity\\User::getPicture<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#169\">App\\Entity\\User::setPicture<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#176\">App\\Entity\\User::getHash<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#181\">App\\Entity\\User::setHash<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#188\">App\\Entity\\User::getSlug<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#193\">App\\Entity\\User::setSlug<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#200\">App\\Entity\\User::getRoles<\/a>"],[50,1,"<a href=\"Entity\/User.php.html#201\">App\\Entity\\User::anonymousFunction:201#766<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#210\">App\\Entity\\User::getPassword<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#214\">App\\Entity\\User::getSalt<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#216\">App\\Entity\\User::getUsername<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#220\">App\\Entity\\User::eraseCredentials<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#225\">App\\Entity\\User::getUserRoles<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#230\">App\\Entity\\User::addUserRole<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#240\">App\\Entity\\User::removeUserRole<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#253\">App\\Entity\\User::getBookings<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#258\">App\\Entity\\User::addBooking<\/a>"],[0,3,"<a href=\"Entity\/User.php.html#268\">App\\Entity\\User::removeBooking<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#281\">App\\Entity\\User::getLastActivity<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#286\">App\\Entity\\User::setLastActivity<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#293\">App\\Entity\\User::getConnected<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#298\">App\\Entity\\User::setConnected<\/a>"],[0,1,"<a href=\"Form\/AccountType.php.html#17\">App\\Form\\AccountType::buildForm<\/a>"],[0,1,"<a href=\"Form\/AccountType.php.html#31\">App\\Form\\AccountType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/AirportType.php.html#12\">App\\Form\\AirportType::buildForm<\/a>"],[0,1,"<a href=\"Form\/AirportType.php.html#20\">App\\Form\\AirportType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/ApplicationType.php.html#16\">App\\Form\\ApplicationType::getConfiguration<\/a>"],[0,1,"<a href=\"Form\/BookingType.php.html#15\">App\\Form\\BookingType::buildForm<\/a>"],[0,1,"<a href=\"Form\/BookingType.php.html#23\">App\\Form\\BookingType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/FlightType.php.html#22\">App\\Form\\FlightType::buildForm<\/a>"],[0,1,"<a href=\"Form\/FlightType.php.html#36\">App\\Form\\FlightType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/PasswordUpdateType.php.html#13\">App\\Form\\PasswordUpdateType::buildForm<\/a>"],[0,1,"<a href=\"Form\/PasswordUpdateType.php.html#22\">App\\Form\\PasswordUpdateType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/RegistrationRoleType.php.html#12\">App\\Form\\RegistrationRoleType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RegistrationRoleType.php.html#29\">App\\Form\\RegistrationRoleType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/RegistrationType.php.html#20\">App\\Form\\RegistrationType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RegistrationType.php.html#32\">App\\Form\\RegistrationType::configureOptions<\/a>"],[100,3,"<a href=\"Kernel.php.html#18\">App\\Kernel::registerBundles<\/a>"],[0,1,"<a href=\"Kernel.php.html#28\">App\\Kernel::configureContainer<\/a>"],[0,1,"<a href=\"Kernel.php.html#40\">App\\Kernel::configureRoutes<\/a>"],[0,1,"<a href=\"Migrations\/Version20190430094607.php.html#15\">DoctrineMigrations\\Version20190430094607::getDescription<\/a>"],[0,1,"<a href=\"Migrations\/Version20190430094607.php.html#20\">DoctrineMigrations\\Version20190430094607::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20190430094607.php.html#45\">DoctrineMigrations\\Version20190430094607::down<\/a>"],[0,1,"<a href=\"Repository\/AirportRepository.php.html#17\">App\\Repository\\AirportRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/AirportRepository.php.html#27\">App\\Repository\\AirportRepository::findIdAirport<\/a>"],[0,1,"<a href=\"Repository\/AirportRepository.php.html#43\">App\\Repository\\AirportRepository::findAirport<\/a>"],[0,2,"<a href=\"Repository\/AirportRepository.php.html#63\">App\\Repository\\AirportRepository::adminArray<\/a>"],[0,1,"<a href=\"Repository\/BookingRepository.php.html#18\">App\\Repository\\BookingRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/BookingRepository.php.html#28\">App\\Repository\\BookingRepository::findAllSeatsForOneFlight<\/a>"],[0,1,"<a href=\"Repository\/BookingRepository.php.html#45\">App\\Repository\\BookingRepository::findOneBooking<\/a>"],[0,1,"<a href=\"Repository\/BookingRepository.php.html#63\">App\\Repository\\BookingRepository::findAllBookingUser<\/a>"],[0,1,"<a href=\"Repository\/BookingRepository.php.html#82\">App\\Repository\\BookingRepository::updateBooking<\/a>"],[0,2,"<a href=\"Repository\/BookingRepository.php.html#100\">App\\Repository\\BookingRepository::adminArray<\/a>"],[0,1,"<a href=\"Repository\/BookingRepository.php.html#144\">App\\Repository\\BookingRepository::countArray<\/a>"],[0,1,"<a href=\"Repository\/BookingRepository.php.html#165\">App\\Repository\\BookingRepository::findUniqueIdFlight<\/a>"],[100,1,"<a href=\"Repository\/CityRepository.php.html#17\">App\\Repository\\CityRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/FlightRepository.php.html#18\">App\\Repository\\FlightRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/FlightRepository.php.html#29\">App\\Repository\\FlightRepository::updateAirportFlight<\/a>"],[0,2,"<a href=\"Repository\/FlightRepository.php.html#50\">App\\Repository\\FlightRepository::adminArray<\/a>"],[0,1,"<a href=\"Repository\/FlightRepository.php.html#90\">App\\Repository\\FlightRepository::flightToday<\/a>"],[0,1,"<a href=\"Repository\/JetRepository.php.html#17\">App\\Repository\\JetRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/PasswordUpdateRepository.php.html#17\">App\\Repository\\PasswordUpdateRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/RoleRepository.php.html#17\">App\\Repository\\RoleRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/SeatRepository.php.html#17\">App\\Repository\\SeatRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/SeatRepository.php.html#27\">App\\Repository\\SeatRepository::findAllSeatByJet<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#17\">App\\Repository\\UserRepository::__construct<\/a>"],[0,2,"<a href=\"Repository\/UserRepository.php.html#33\">App\\Repository\\UserRepository::adminArray<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#67\">App\\Repository\\UserRepository::countArray<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#84\">App\\Repository\\UserRepository::getActive<\/a>"],[100,1,"<a href=\"Service\/ActivityListener.php.html#18\">App\\Service\\ActivityListener::__construct<\/a>"],[69.23076923076923,4,"<a href=\"Service\/ActivityListener.php.html#28\">App\\Service\\ActivityListener::onCoreController<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#20\">App\\Service\\Paginator::__construct<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#27\">App\\Service\\Paginator::setColumn<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#33\">App\\Service\\Paginator::getColumn<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#37\">App\\Service\\Paginator::setOrder<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#43\">App\\Service\\Paginator::getOrder<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#47\">App\\Service\\Paginator::setTemplatePath<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#53\">App\\Service\\Paginator::getTemplatePath<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#57\">App\\Service\\Paginator::setRoute<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#63\">App\\Service\\Paginator::getRoute<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#68\">App\\Service\\Paginator::display<\/a>"],[0,2,"<a href=\"Service\/Paginator.php.html#78\">App\\Service\\Paginator::getPages<\/a>"],[0,2,"<a href=\"Service\/Paginator.php.html#92\">App\\Service\\Paginator::getDataDql<\/a>"],[0,2,"<a href=\"Service\/Paginator.php.html#107\">App\\Service\\Paginator::getData<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#122\">App\\Service\\Paginator::setEntityClass<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#128\">App\\Service\\Paginator::getEntityClass<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#132\">App\\Service\\Paginator::setLimit<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#138\">App\\Service\\Paginator::getLimit<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#142\">App\\Service\\Paginator::setPage<\/a>"],[0,1,"<a href=\"Service\/Paginator.php.html#148\">App\\Service\\Paginator::getPage<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#23\">App\\Service\\PaginatorDql::__construct<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#30\">App\\Service\\PaginatorDql::setConcat<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#36\">App\\Service\\PaginatorDql::getConcat<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#40\">App\\Service\\PaginatorDql::setFunction<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#46\">App\\Service\\PaginatorDql::getFunction<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#50\">App\\Service\\PaginatorDql::setColumn<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#56\">App\\Service\\PaginatorDql::getColumn<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#60\">App\\Service\\PaginatorDql::setOrder<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#66\">App\\Service\\PaginatorDql::getOrder<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#70\">App\\Service\\PaginatorDql::setEntityClassPage<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#76\">App\\Service\\PaginatorDql::getEntityClassPage<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#80\">App\\Service\\PaginatorDql::setTemplatePath<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#86\">App\\Service\\PaginatorDql::getTemplatePath<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#90\">App\\Service\\PaginatorDql::setRoute<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#96\">App\\Service\\PaginatorDql::getRoute<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#101\">App\\Service\\PaginatorDql::display<\/a>"],[0,6,"<a href=\"Service\/PaginatorDql.php.html#112\">App\\Service\\PaginatorDql::getPages<\/a>"],[0,2,"<a href=\"Service\/PaginatorDql.php.html#151\">App\\Service\\PaginatorDql::getData<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#166\">App\\Service\\PaginatorDql::setEntityClass<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#172\">App\\Service\\PaginatorDql::getEntityClass<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#176\">App\\Service\\PaginatorDql::setLimit<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#182\">App\\Service\\PaginatorDql::getLimit<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#186\">App\\Service\\PaginatorDql::setPage<\/a>"],[0,1,"<a href=\"Service\/PaginatorDql.php.html#192\">App\\Service\\PaginatorDql::getPage<\/a>"],[100,1,"<a href=\"Service\/StatsAilesx.php.html#12\">App\\Service\\StatsAilesx::__construct<\/a>"],[100,1,"<a href=\"Service\/StatsAilesx.php.html#16\">App\\Service\\StatsAilesx::setGlobalVariableOnlyGroupByMySql<\/a>"],[0,1,"<a href=\"Service\/StatsAilesx.php.html#26\">App\\Service\\StatsAilesx::getStats<\/a>"],[0,1,"<a href=\"Service\/StatsAilesx.php.html#37\">App\\Service\\StatsAilesx::getDestinationStats<\/a>"],[0,1,"<a href=\"Service\/StatsAilesx.php.html#52\">App\\Service\\StatsAilesx::getUsersCount<\/a>"],[0,1,"<a href=\"Service\/StatsAilesx.php.html#58\">App\\Service\\StatsAilesx::getFlightsCount<\/a>"],[0,1,"<a href=\"Service\/StatsAilesx.php.html#62\">App\\Service\\StatsAilesx::getBookingsCount<\/a>"],[0,1,"<a href=\"Service\/StatsAilesx.php.html#66\">App\\Service\\StatsAilesx::getDestinationsCount<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

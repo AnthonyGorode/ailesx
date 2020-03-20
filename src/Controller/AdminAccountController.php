@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\StatsAilesx;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,8 +13,10 @@ class AdminAccountController extends AbstractController
     /**
      * @Route("/admin/login", name="admin_account_login")
      */
-    public function login(AuthenticationUtils $utils)
+    public function login(AuthenticationUtils $utils,StatsAilesx $statsService)
     {
+        // $statsService->setGlobalVariableOnlyGroupByMySql();
+
         $error = $utils->getLastAuthenticationError();
 
         $username = $utils->getLastUsername();

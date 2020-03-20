@@ -191,7 +191,7 @@ input:-moz-placeholder { text-align:center; }
 @media screen and (max-width:1750px){
 }
 @media screen and (max-width:1600px){
-    .home-buttons{left: 250px;}
+    .home-buttons{left: 50px;}
     .bloc_accueil{height: 560px;}
 }
 @media screen and (max-width:1385px){

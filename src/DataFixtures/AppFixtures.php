@@ -33,12 +33,16 @@ class AppFixtures extends Fixture
         $adminRole->setTitle('ROLE_ADMIN');
         $manager->persist($adminRole);
 
+        $lastActivity = $faker->dateTimeBetween('-6 months');
+
          $adminUser = new User();
          $adminUser->setFirstName('Anthony')
                    ->setLastName('Gorode')
                    ->setEmail('anthony.gorode@gmail.com')
                    ->setHash($this->encoder->encodePassword($adminUser,'password'))
-                   ->setPicture('https://scontent-yyz1-1.cdninstagram.com/vp/9c278fb82c700243cf2ab9391a9d2a55/5D0CC817/t51.2885-19/s150x150/47448280_724832411231066_2597987633875386368_n.jpg?_nc_ht=scontent-yyz1-1.cdninstagram.com&se=8')
+                   ->setPicture('https://media-exp1.licdn.com/dms/image/C5603AQFF26ouGKK4eA/profile-displayphoto-shrink_200_200/0?e=1586995200&v=beta&t=n9zZOJ_WFKlMaftKCF8nbcIWYfub0VC3WRf64cEw2Kc')
+                   ->setLastActivity($lastActivity)
+                   ->setConnected(false)
                    ->addUserRole($adminRole);
         $manager->persist($adminUser);
 
@@ -51,6 +55,7 @@ class AppFixtures extends Fixture
             $user = new User();
 
             $genre = $faker->randomElement($genres);
+            $lastActivityUser = $faker->dateTimeBetween('-6 months');
 
             $picture = 'https://randomuser.me/api/portraits/';
             $pictureId = $faker->numberBetween(1,99) . '.jpg';
@@ -68,7 +73,9 @@ class AppFixtures extends Fixture
                  ->setLastName($faker->lastname)
                  ->setEmail($faker->email)
                  ->setHash($hash)
-                 ->setPicture($picture);
+                 ->setPicture($picture)
+                 ->setLastActivity($lastActivityUser)
+                 ->setConnected(false);
 
             $manager->persist($user);
             $users[] = $user;
